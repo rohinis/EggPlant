@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-22 11:27:23.215 +0530"
+ tests="22" successes="21" errors="0" time="413.218000">
+  <properties>
+   <property name="RunDate" value="2019-11-22 11:27:23.215 +0530"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles" assertions="1" successes="1" errors="0" time="22.762">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_Select_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="23.546">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_UI_DragAndDrop_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="31.026">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_Overwrite_ShowJobProfiles" assertions="1" successes="1" errors="0" time="19.769">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_NoIncludes_ShowJobProfiles" assertions="1" successes="1" errors="0" time="14.986">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NonDefault_ShowJobProfiles" assertions="1" successes="1" errors="0" time="26.391">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_ShowJobProfiles" assertions="1" successes="1" errors="0" time="20.356">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_ShowJobProfiles" assertions="1" successes="1" errors="0" time="16.647">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NonDefaults_ShowJobProfiles" assertions="1" successes="1" errors="0" time="24.254">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_WithFile_ShowJobProfiles" assertions="1" successes="1" errors="0" time="10.545">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_Default_Values_NewJob" assertions="1" successes="1" errors="0" time="13.782">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_NewJob" assertions="1" successes="1" errors="0" time="22.156">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_Select_File_NewJob" assertions="1" successes="1" errors="0" time="21.708">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_UI_DragAndDrop_File_NewJob" assertions="1" successes="1" errors="0" time="26.09">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_Overwrite_NewJob" assertions="1" successes="1" errors="0" time="17.836">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_NoIncludes_NewJob" assertions="1" successes="1" errors="0" time="13.089">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NonDefault_NewJob" assertions="1" successes="1" errors="0" time="20.426">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NewJob" assertions="1" successes="1" errors="0" time="18.268">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NewJob" assertions="1" successes="1" errors="0" time="14.978">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NonDefaults_NewJob" assertions="1" successes="1" errors="0" time="21.474">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_WithFile_NewJob" assertions="1" successes="1" errors="0" time="9.725">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="21" successes="21" errors="0" time="413.218">
+  </testcase>
+ </testsuite>
+</testsuites>

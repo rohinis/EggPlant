@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-28 10:35:53.639 +0530"
+ tests="21" successes="18" errors="2" time="565.892000">
+  <properties>
+   <property name="RunDate" value="2019-11-28 10:35:53.639 +0530"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="Job_Submission_DynamicAppDef_Default_Values_ShowJobProfiles" assertions="1" successes="1" errors="0" time="16.424">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_NoDefault_Values_ShowJobProfiles" assertions="1" successes="1" errors="0" time="28.809">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_Select_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="29.443">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_UI_DragAndDrop_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="36.042">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_Overwrite_ShowJobProfiles" assertions="1" successes="1" errors="0" time="25.283">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_YesIncludes_ShowJobProfiles" assertions="1" successes="1" errors="0" time="18.579">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_AllFileds_NoDefault_ShowJobProfiles" assertions="1" successes="0" errors="1" time="56.49">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_AllFileds_ShowJobProfiles" assertions="1" successes="0" errors="1" time="58.708">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_RequiredFileds_ShowJobProfiles" assertions="1" successes="1" errors="0" time="20.83">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_RequiredFileds_NoDefaults_ShowJobProfiles" assertions="1" successes="1" errors="0" time="29.507">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_Default_Values_NewJob" assertions="1" successes="1" errors="0" time="17.831">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_NoDefault_Values_NewJob" assertions="1" successes="1" errors="0" time="26.552">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_Select_File_NewJob" assertions="1" successes="1" errors="0" time="27.436">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_UI_DragAndDrop_File_NewJob" assertions="1" successes="1" errors="0" time="34.886">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_Overwrite_NewJob" assertions="1" successes="1" errors="0" time="23.791">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_Includes_NewJob" assertions="1" successes="1" errors="0" time="18.059">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_AllFileds_NoDefault_NewJob" assertions="1" successes="1" errors="0" time="27.195">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_AllFileds_NewJob" assertions="1" successes="1" errors="0" time="24.596">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_RequiredFileds_NewJob" assertions="1" successes="1" errors="0" time="18.17">
+  </testcase>
+  <testcase name="Job_Submission_DynamicAppDef_From_RequiredFileds_NoDefaults_NewJob" assertions="1" successes="1" errors="0" time="22.839">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="20" successes="18" errors="2" time="565.883">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+ </testsuite>
+</testsuites>

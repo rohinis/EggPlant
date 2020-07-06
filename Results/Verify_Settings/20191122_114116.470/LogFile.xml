@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="Verify_Settings.script" package="AccessDesktopRegression.suite" timestamp="2019-11-22 11:41:16.470 +0530"
+ tests="5" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2019-11-22 11:41:16.470 +0530"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="ShowJobProfiles" assertions="1" successes="1" errors="0" time="9.611">
+  </testcase>
+  <testcase name="OpenClustersWindow" assertions="0" successes="0" errors="0" time="12.246">
+  </testcase>
+  <testcase name="ExportCofig" assertions="0" successes="0" errors="0" time="27.48">
+  </testcase>
+  <testcase name="ShowLogs" assertions="1" successes="0" errors="1" time="101.712">
+  </testcase>
+  <testcase name="Verify_Settings.script" assertions="2" successes="1" errors="1" time="151.319">
+  </testcase>
+ </testsuite>
+</testsuites>

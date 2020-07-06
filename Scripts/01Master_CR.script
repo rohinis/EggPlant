@@ -1,0 +1,26 @@
+﻿params testDataFile , module
+
+set myExcelDB to table (module) of (type:"excel", file:testDataFile)
+
+put the records of myExcelDB into DataSet
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		Run toRun testData
+		
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+// "AddCluster/AddCluster_CentralRepo"

@@ -1,0 +1,369 @@
+﻿2019-11-22 11:22:05.271 +0530	START		Running MasterScript.script
+2019-11-22 11:22:07.628 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:22:07.744 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:22:08.260 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:08.298 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:08.329 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:09.146 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:09.215 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:10.080 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:10.903 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:10.934 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:11.219 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:11.350 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:12.187 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:12.336 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:15.526 +0530	LogWarning		Unable to Find Image(s): Lable_NCPU.png -- AutoUpdate engaged	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:16.343 +0530	AutoUpdateCaptureScreen	AutoUpdate_0001.png		21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:16.343 +0530	AutoUpdateWarning	PD_Optistruct_App_Page/Lable_NCPU.png	Found Alternate Image -- Using Scaling Search 1.2500	21	on_jsdynamicappdef	JSDynamicAppDef.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:22:16.528 +0530	click	PD_Optistruct_App_Page/Lable_NCPU.png	at (1646, 563)	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:17.291 +0530	typetext		[controlKey]a	22	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:18.045 +0530	typetext		2	23	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:18.931 +0530	click	PD_Optistruct_App_Page/Lable_Mem	at (1584, 633)	25	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:19.694 +0530	typetext		[controlKey]a	26	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:20.511 +0530	typetext		120	27	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:21.365 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_master_file	Select_File.script
+2019-11-22 11:22:22.266 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_master_file	Select_File.script
+2019-11-22 11:22:23.236 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:22:24.185 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:22:25.138 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:22:25.971 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 699)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:26.025 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 702)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:26.087 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:26.303 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:22:26.357 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:22:26.521 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:29.946 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:30.532 +0530	AutoUpdateCaptureScreen	AutoUpdate_0002.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:30.532 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:22:30.826 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:30.879 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:30.980 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:31.033 +0530	EndTestCase		(Duration:"23.288", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:22:07 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles", Warnings:"2")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:22:31.033 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:22:31.064 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:22:31.064 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_Select_File_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:22:31.165 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:31.580 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:31.727 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:32.567 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:32.634 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:33.701 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:34.515 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:34.584 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:34.869 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:35.033 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:35.718 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:35.855 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:39.106 +0530	LogWarning		Unable to Find Image(s): Lable_NCPU.png -- AutoUpdate engaged	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:39.941 +0530	AutoUpdateCaptureScreen	AutoUpdate_0003.png		21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:39.945 +0530	AutoUpdateWarning	PD_Optistruct_App_Page/Lable_NCPU.png	Found Alternate Image -- Using Scaling Search 1.2500	21	on_jsdynamicappdef	JSDynamicAppDef.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:22:40.089 +0530	click	PD_Optistruct_App_Page/Lable_NCPU.png	at (1646, 563)	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:40.841 +0530	typetext		[controlKey]a	22	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:41.595 +0530	typetext		2	23	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:42.496 +0530	click	PD_Optistruct_App_Page/Lable_Mem	at (1584, 633)	25	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:43.266 +0530	typetext		[controlKey]a	26	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:44.082 +0530	typetext		120	27	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:44.900 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_master_file	Select_File.script
+2019-11-22 11:22:45.801 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_master_file	Select_File.script
+2019-11-22 11:22:46.733 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:22:47.672 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:22:48.619 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:22:49.420 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 699)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:49.474 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 702)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:49.536 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:49.774 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:22:49.859 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:22:50.005 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:53.311 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:54.012 +0530	AutoUpdateCaptureScreen	AutoUpdate_0004.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:54.012 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:22:54.381 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:54.443 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:54.562 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:54.614 +0530	EndTestCase		(Duration:"23.549", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:22:31 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_Select_File_ShowJobProfiles", Warnings:"2")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:22:54.622 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:22:54.666 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:22:54.677 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_UI_DragAndDrop_File_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:22:54.909 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:55.112 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:55.252 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:56.034 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:56.080 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:57.167 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:22:57.937 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:57.992 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:58.236 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:22:58.564 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:59.068 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:22:59.122 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:02.691 +0530	LogWarning		Unable to Find Image(s): InputFolder.png -- AutoUpdate engaged	3	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:03.272 +0530	AutoUpdateCaptureScreen	AutoUpdate_0005.png		3	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:03.273 +0530	AutoUpdateWarning	Dekstop_Images/InputFolder.png	Found Alternate Image -- Using Dynamic Tolerance 60	3	function_select_master_file_dnd	Select_File.script	Info = 60; Name = "Dynamic Tolerance"; 
+2019-11-22 11:23:03.463 +0530	doubleclick	Dekstop_Images/InputFolder.png	at (39, 294)	3	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:04.410 +0530	click	Dekstop_Images/InputFile_MasterFile.fem	at (636, 450)	4	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:05.295 +0530	drag	Dekstop_Images/InputFile_MasterFile_Selected.fem	at (636, 450)	5	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:08.922 +0530	LogWarning		Unable to Find Image(s): DropLocation_InputFile.png -- AutoUpdate engaged	6	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:11.000 +0530	AutoUpdateCaptureScreen	AutoUpdate_0006.png		6	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:11.007 +0530	AutoUpdateWarning	PD_Optistruct_App_Page/DropLocation_InputFile.png	Found Alternate Image -- Using Scaling Search 1.2500	6	function_select_master_file_dnd	Select_File.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:23:12.833 +0530	drop	PD_Optistruct_App_Page/DropLocation_InputFile.png	at (1665, 701)	6	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:13.568 +0530	moveto	Dekstop_Images/Folder_close_Help	at (1050, 177)	7	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:15.451 +0530	click	Dekstop_Images/Folder_close_Red	at (1050, 171)	9	function_select_master_file_dnd	Select_File.script
+2019-11-22 11:23:16.270 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 699)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:16.383 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 702)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:16.478 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:16.795 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:23:16.849 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:23:17.023 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:20.369 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:20.975 +0530	AutoUpdateCaptureScreen	AutoUpdate_0007.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:20.975 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:23:21.260 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:21.314 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:21.430 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:21.461 +0530	EndTestCase		(Duration:"26.784", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:22:54 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_UI_DragAndDrop_File_ShowJobProfiles", Warnings:"3")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:23:21.476 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:23:21.510 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:23:21.513 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_Overwrite_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:23:21.613 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:22.004 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:22.135 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:22.963 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:23.032 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:24.133 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:24.901 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:24.981 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:25.214 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:25.520 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:26.136 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:26.298 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:26.937 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_master_file	Select_File.script
+2019-11-22 11:23:27.969 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_master_file	Select_File.script
+2019-11-22 11:23:28.939 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:23:29.988 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:23:30.940 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:23:31.191 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:23:31.748 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:23:31.902 +0530	Log		Master and Include files Selected - Now Over writing 	46	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:31.992 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_overwrite_master_file	Select_File.script
+2019-11-22 11:23:32.813 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_overwrite_master_file	Select_File.script
+2019-11-22 11:23:33.734 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_overwrite_master_file	Select_File.script
+2019-11-22 11:23:34.638 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_overwrite_master_file	Select_File.script
+2019-11-22 11:23:35.593 +0530	doubleclick	Dekstop_Images/InputFile_OverwriteMaster	at (1312, 487)	7	function_overwrite_master_file	Select_File.script
+2019-11-22 11:23:35.850 +0530	Log		PD_Optistruct_App_Page/Include_OverwriteFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:23:36.435 +0530	imagefound	PD_Optistruct_App_Page/Include_OverwriteFiles	found at (1654, 782)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:23:36.582 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:39.987 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:40.642 +0530	AutoUpdateCaptureScreen	AutoUpdate_0008.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:40.642 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:23:40.989 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:41.042 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:41.158 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:41.190 +0530	EndTestCase		(Duration:"19.677", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:23:21 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_Overwrite_ShowJobProfiles", Warnings:"1")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:23:41.205 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:23:41.243 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:23:41.243 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_NoIncludes_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:23:41.359 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:41.759 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:41.907 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:42.724 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:42.777 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:43.879 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:44.680 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:44.749 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:45.096 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:23:45.250 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:45.966 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:46.091 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:46.805 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_fem_file	Select_File.script
+2019-11-22 11:23:47.741 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_fem_file	Select_File.script
+2019-11-22 11:23:48.712 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_fem_file	Select_File.script
+2019-11-22 11:23:49.661 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_fem_file	Select_File.script
+2019-11-22 11:23:50.646 +0530	doubleclick	Dekstop_Images/InputFile_box	at (1285, 529)	7	function_select_fem_file	Select_File.script
+2019-11-22 11:23:50.900 +0530	Log		PD_Optistruct_App_Page/Lable_FemFile_Selected	2	function_checkwait	WaitFunction.script
+2019-11-22 11:23:51.433 +0530	imagefound	PD_Optistruct_App_Page/Lable_FemFile_Selected	found at (1592, 702)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:23:51.633 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:54.969 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:55.897 +0530	AutoUpdateCaptureScreen	AutoUpdate_0009.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:55.899 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:23:56.478 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:56.679 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:56.834 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:23:56.875 +0530	EndTestCase		(Duration:"15.632", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:23:41 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_NoIncludes_ShowJobProfiles", Warnings:"1")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:23:56.891 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:23:56.938 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:23:56.938 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NonDefault_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:23:57.092 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:57.223 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:57.408 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:58.225 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:58.341 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:23:59.443 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:00.244 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:00.297 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:00.529 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:00.782 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:01.446 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:01.583 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:04.466 +0530	LogWarning		Unable to Find Image(s): Lable_AllFileds.png -- AutoUpdate engaged	66	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:05.406 +0530	AutoUpdateCaptureScreen	AutoUpdate_0010.png		66	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:05.411 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Lable_AllFileds.png	Found Alternate Image -- Using Scaling Search 1.2500	66	on_jsdynamicappdef	JSDynamicAppDef.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:24:05.587 +0530	click	PD_PBSJobApp_Page/Lable_AllFileds.png	at (1729, 383)	66	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:05.725 +0530	Log		PD_Optistruct_App_Page/Lable_OptionalFiled	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:06.389 +0530	imagefound	PD_Optistruct_App_Page/Lable_OptionalFiled	found at (1588, 689)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:06.543 +0530	Log		Optional Fileds Displayed	69	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:06.659 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 737)	3	function_select_master_file	Select_File.script
+2019-11-22 11:24:07.576 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 737)	4	function_select_master_file	Select_File.script
+2019-11-22 11:24:08.563 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:24:09.511 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:24:10.480 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:24:11.451 +0530	click	PD_PBSJobApp_Page/Lable_Queue_dropDown	at (1579, 698)	76	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:12.495 +0530	click	PD_PBSJobApp_Page/ListItem_QueueNormalPri	at (1610, 779)	77	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:13.300 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 764)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:13.369 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 767)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:13.438 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:13.653 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:13.717 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 848)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:13.854 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:17.206 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:17.892 +0530	AutoUpdateCaptureScreen	AutoUpdate_0011.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:17.892 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:24:18.177 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:18.230 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:18.346 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:18.378 +0530	EndTestCase		(Duration:"21.44", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:23:56 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NonDefault_ShowJobProfiles", Warnings:"2")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:24:18.393 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:24:18.431 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:24:18.447 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:24:18.547 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:18.969 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:19.110 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:19.949 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:20.030 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:21.129 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:21.936 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:21.982 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:22.479 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:22.665 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:23.366 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:23.517 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:26.474 +0530	LogWarning		Unable to Find Image(s): Lable_AllFileds.png -- AutoUpdate engaged	54	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:27.292 +0530	AutoUpdateCaptureScreen	AutoUpdate_0012.png		54	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:27.292 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Lable_AllFileds.png	Found Alternate Image -- Using Scaling Search 1.2500	54	on_jsdynamicappdef	JSDynamicAppDef.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:24:27.508 +0530	click	PD_PBSJobApp_Page/Lable_AllFileds.png	at (1729, 383)	54	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:27.555 +0530	Log		PD_Optistruct_App_Page/Lable_OptionalFiled	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:28.277 +0530	imagefound	PD_Optistruct_App_Page/Lable_OptionalFiled	found at (1588, 689)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:28.473 +0530	Log		Optional Fileds Displayed	57	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:28.572 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 737)	3	function_select_master_file	Select_File.script
+2019-11-22 11:24:29.457 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 737)	4	function_select_master_file	Select_File.script
+2019-11-22 11:24:30.396 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:24:31.398 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:24:32.378 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:24:33.231 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 764)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:33.284 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 767)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:33.347 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:33.584 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:33.684 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 848)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:33.831 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:37.282 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:37.968 +0530	AutoUpdateCaptureScreen	AutoUpdate_0013.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:37.968 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:24:38.284 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:38.337 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:38.453 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:38.507 +0530	EndTestCase		(Duration:"20.06", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:24:18 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_ShowJobProfiles", Warnings:"2")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:24:38.507 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:24:38.554 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:24:38.554 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:24:38.689 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:39.070 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:39.224 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:40.040 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:40.119 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:41.210 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:41.996 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:42.043 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:42.374 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:42.544 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:43.313 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:43.498 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:44.245 +0530	click	PD_PBSJobApp_Page/Lable_ReqFileds	at (1618, 386)	81	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:44.314 +0530	Log		PD_Optistruct_App_Page/Lable_ReqFiledsOnly	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:45.031 +0530	imagefound	PD_Optistruct_App_Page/Lable_ReqFiledsOnly	found at (1601, 591)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:45.263 +0530	Log		Only Required Fileds Displayed	85	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:45.517 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_master_file	Select_File.script
+2019-11-22 11:24:46.419 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_master_file	Select_File.script
+2019-11-22 11:24:47.398 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:24:48.423 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:24:49.455 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:24:50.287 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 699)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:50.341 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 702)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:50.525 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:50.742 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:24:50.815 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:24:51.009 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:54.557 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:55.216 +0530	AutoUpdateCaptureScreen	AutoUpdate_0014.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:55.216 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:24:55.564 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:55.617 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:55.733 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:24:55.795 +0530	EndTestCase		(Duration:"17.241", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:24:38 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_ShowJobProfiles", Warnings:"1")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:24:55.795 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:24:55.849 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:24:55.864 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NonDefaults_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:24:55.980 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:56.334 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:56.513 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:57.335 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:57.382 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:58.484 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:24:59.320 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	found at (1596, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:59.385 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	found at (1597, 713)	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:59.739 +0530	doubleclick		at (1597, 713)	87	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:24:59.986 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1594, 412)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:00.641 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1594, 412)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:00.756 +0530	waitfor	PD_PBSJobApp_Page/SelectServer_CR	found at (1574, 437)	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:04.008 +0530	LogWarning		Unable to Find Image(s): Lable_NCPU.png -- AutoUpdate engaged	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:04.848 +0530	AutoUpdateCaptureScreen	AutoUpdate_0015.png		21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:04.863 +0530	AutoUpdateWarning	PD_Optistruct_App_Page/Lable_NCPU.png	Found Alternate Image -- Using Scaling Search 1.2500	21	on_jsdynamicappdef	JSDynamicAppDef.script	Info = "1.2500"; Name = "Scaling Search"; 
+2019-11-22 11:25:04.995 +0530	click	PD_Optistruct_App_Page/Lable_NCPU.png	at (1646, 563)	21	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:05.765 +0530	typetext		[controlKey]a	22	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:06.512 +0530	typetext		2	23	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:07.398 +0530	click	PD_Optistruct_App_Page/Lable_Mem	at (1584, 633)	25	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:08.169 +0530	typetext		[controlKey]a	26	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:08.986 +0530	typetext		120	27	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:09.804 +0530	moveto	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	3	function_select_master_file	Select_File.script
+2019-11-22 11:25:10.688 +0530	click	PD_Optistruct_App_Page/Lable_MasterFile	at (1873, 672)	4	function_select_master_file	Select_File.script
+2019-11-22 11:25:11.660 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_Desktop	at (1583, 468)	5	function_select_master_file	Select_File.script
+2019-11-22 11:25:12.661 +0530	doubleclick	PD_PBSJobApp_Page/InputFolder_InputDeck	at (1288, 471)	6	function_select_master_file	Select_File.script
+2019-11-22 11:25:13.624 +0530	doubleclick	PD_Optistruct_App_Page/IncludeFile_Master	at (1296, 509)	7	function_select_master_file	Select_File.script
+2019-11-22 11:25:14.447 +0530	imagefound	PD_Optistruct_App_Page/List_MasterFile	found at (1601, 699)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:14.478 +0530	imagefound	PD_Optistruct_App_Page/Lable_MasterFile_Selected	found at (1601, 702)	101	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:14.547 +0530	Log		 Master File selected 	102	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:14.826 +0530	Log		PD_Optistruct_App_Page/List_IncludeFiles	2	function_checkwait	WaitFunction.script
+2019-11-22 11:25:14.979 +0530	imagefound	PD_Optistruct_App_Page/List_IncludeFiles	found at (1666, 783)	4	function_checkwait	WaitFunction.script
+2019-11-22 11:25:15.195 +0530	Log		Files Pupolated	108	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:18.546 +0530	LogWarning		Unable to Find Image(s): Btn_Submit.png -- AutoUpdate engaged	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:19.154 +0530	AutoUpdateCaptureScreen	AutoUpdate_0016.png		114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:19.154 +0530	AutoUpdateWarning	PD_PBSJobApp_Page/Btn_Submit.png	Found Alternate Image -- Using Dynamic Tolerance 81	114	on_jsdynamicappdef	JSDynamicAppDef.script	Info = 81; Name = "Dynamic Tolerance"; 
+2019-11-22 11:25:19.471 +0530	click	PD_PBSJobApp_Page/Btn_Submit.png	at (1660, 989)	114	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:19.552 +0530	imagefound	PD_HomePage_Lables/Lable_Summary	found at (1553, 370)	130	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:19.655 +0530	LogSuccess		Navigated to Summary Page	131	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:19.717 +0530	EndTestCase		(Duration:"23.853", Errors:"0", Exceptions:"0", StartTime:"2019-11-22 11:24:55 +0530", Successes:"1", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NonDefaults_ShowJobProfiles", Warnings:"2")	25	on_02master_js	02Master_JS.script
+2019-11-22 11:25:19.749 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	26	on_02master_js	02Master_JS.script
+2019-11-22 11:25:19.855 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:25:19.871 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_WithFile_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:25:20.071 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:20.233 +0530	imagefound	PD_Icn_Settings	found at (1885, 357)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:20.434 +0530	moveto		at (1885, 357)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:21.272 +0530	click		at (1885, 357)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:21.373 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:22.391 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1786, 380)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:25:25.677 +0530	imagefound	PD_Created_Profiles/Lable_DAWithFile	Unable to Find Image PD_Created_Profiles/Lable_DAWithFile	95	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:25:28.196 +0530	imagefound	PD_Created_Profiles/Lable_DAWithFile_Selected	Unable to Find Image PD_Created_Profiles/Lable_DAWithFile_Selected	95	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:25:43.588 +0530	LogWarning		Unable to Find Image(s): DropDown_SelectServer.png -- AutoUpdate engaged	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:47.475 +0530	Exception	PD_PBSJobApp_Page/DropDown_SelectServer	Unable To Find Any Image On Screen "PD_PBSJobApp_Page/DropDown_SelectServer" within 15.00 seconds	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:25:47.798 +0530	EndTestCase		(Duration:"27.927", Errors:"1", Exceptions:"1", StartTime:"2019-11-22 11:25:19 +0530", Successes:"0", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_WithFile_ShowJobProfiles", Warnings:"1")
+2019-11-22 11:25:47.798 +0530	EndTestCase		(Duration:"222.527", Errors:"1", Exceptions:"1", StartTime:"2019-11-22 11:22:05 +0530", Successes:"9", TestCase:"MasterScript.script", Warnings:"17")
+2019-11-22 11:25:47.945 +0530	FAILURE	Screen_Error.png	Image Not Found waitfor Error - Unable To Find Any Image On Screen "PD_PBSJobApp_Page/DropDown_SelectServer" within 15.00 seconds -- Execution Time 0:03:42 MasterScript.script

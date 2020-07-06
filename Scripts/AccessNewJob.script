@@ -1,0 +1,24 @@
+﻿
+
+Log "In Access New JOb ", "PD_HomePage_Lables/Lable_NewJob"
+
+
+
+Click "PD_HomePage_Lables/Lable_NewJob"
+
+if ImageFound("PD_ProfilesPage/Lable_Profiles") then
+	Log " Navigated to Profiles Page "
+else
+	
+	Repeat until imagefound(image:"PD_HomePage_Lables/Lable_Summary")
+		
+		if the repeatindex is greater than 3 // Read more about the repeatIndex below
+			log "Not able to navigate to summary page using Back Arrow "
+		end if
+		
+		Click"PD_ProfilesPage/Icn_BackArrow"
+		
+	end repeat
+	Click "PD_HomePage_Lables/Lable_NewJob"
+	
+end if

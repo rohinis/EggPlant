@@ -1,0 +1,8 @@
+﻿2020-07-06 10:01:32.521 +0530	START		Running MasterScript.script
+2020-07-06 10:01:32.772 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2020-07-06 10:01:32.784 +0530	BeginTestCase		Job_Submission_CompleteAppDef_NonDefault_Values_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2020-07-06 10:01:32.889 +0530	Log		In Access New JOb 	3	on_accessnewjob	AccessNewJob.script
+2020-07-06 10:01:32.890 +0530	Log		PD_HomePage_Lables/Lable_NewJob	3	on_accessnewjob	AccessNewJob.script
+2020-07-06 10:01:34.921 +0530	EndTestCase		(Duration:"2.136", Errors:"1", Exceptions:"0", StartTime:"2020-07-06 10:01:32 +0530", Successes:"0", TestCase:"Job_Submission_CompleteAppDef_NonDefault_Values_ShowJobProfiles", Warnings:"0")
+2020-07-06 10:01:34.926 +0530	EndTestCase		(Duration:"2.399", Errors:"1", Exceptions:"0", StartTime:"2020-07-06 10:01:32 +0530", Successes:"0", TestCase:"MasterScript.script", Warnings:"0")
+2020-07-06 10:01:34.928 +0530	ABORTED		Execution Time 0:00:02 MasterScript.script

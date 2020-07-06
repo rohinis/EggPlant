@@ -1,0 +1,7 @@
+1	-0	start	
+2	5.92	flagsChanged	262144
+3	5.967	flagsChanged	262144
+4	5.967	flagsChanged	0
+5	8.507	mouseDown	{button:1, clickCount:1, hotSpot:[430.278884, 177.769912]}
+6	11.843	mouseUp	{button:1, clickCount:0, hotSpot:[1659.920319, 625.061947]}
+7	17.072	end	

@@ -1,0 +1,34 @@
+{
+    commandList = "[{captureRect:[440, 815, 494, 828], command:@\"RightClick\", eventNum:2, hotSpot:[456, 258], imageName:@\"\", infoDict:{folderPath:@\"/Dekstop_Images\", imageName:@\"JobFilesh\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"JobFile.sh\", screenShotFile:@\"Screen0002.png\", useOCR:@\"NO\"}, {captureRect:[489, 801, 562, 814], command:@\"Click\", eventNum:4, hotSpot:[528, 273], imageName:@\"\", infoDict:{folderPath:@\"/Dekstop_Images\", imageName:@\"Processwith\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"Process with\", screenShotFile:@\"Screen0004.png\", useOCR:@\"NO\"}, {captureRect:[764, 755, 862, 770], command:@\"Click\", eventNum:6, hotSpot:[813, 313], imageName:@\"\", infoDict:{folderPath:@\"/Dekstop_Images\", imageName:@\"XToFillCRGUI\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"X ToFill (CR) GUI\", screenShotFile:@\"Screen0006.png\", useOCR:@\"NO\"}, {captureRect:[1645, 1012, 1671, 1038], command:@\"Click\", eventNum:8, hotSpot:[1805, 67], imageName:@\"\", infoDict:{folderPath:@\"/Notifications\", imageName:@\"Nft_InputsRequired\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRHotSpot:[160, 1], OCRText:@\"Values required for some fields\", screenShotFile:@\"Screen0008.png\", useOCR:@\"NO\"}, {captureRect:[1645, 1012, 1670, 1037], command:@\"Click\", eventNum:10, hotSpot:[1654, 60], imageName:@\"\", infoDict:{folderPath:@\"/Notifications\", imageName:@\"image0006\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0010.png\"}, {captureRect:[1766, 1024, 1836, 1054], command:@\"Click\", eventNum:12, hotSpot:[1801, 41], imageName:@\"\", infoDict:{folderPath:@\"/Notifications\", imageName:@\"image0008\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0012.png\"}, {captureRect:[1531, 650, 1601, 680], command:@\"Click\", eventNum:14, hotSpot:[1566, 415], imageName:@\"\", infoDict:{folderPath:@\"/Notifications\", imageName:@\"image0007\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0014.png\"}]";
+    generatedCommands = (
+	"RightClick \"Dekstop_Images/JobFilesh\"",
+	"Click \"Dekstop_Images/Processwith\"",
+	"Click \"Dekstop_Images/XToFillCRGUI\"",
+	"Click \"Notifications/Nft_InputsRequired\"",
+	"Click \"Notifications/image0006\"",
+	"Click \"Notifications/image0008\"",
+	"Click \"Notifications/image0007\""
+    );
+    locallyAddedFiles = {
+	"Dekstop_Images" = (
+	    "JobFilesh.png",
+	    "Processwith.png",
+	    "XToFillCRGUI.png",
+	    "JobFilesh.png",
+	    "Processwith.png",
+	    "XToFillCRGUI.png"
+	);
+	Notifications = (
+	    "Nft_InputsRequired.png",
+	    "image0006.png",
+	    "image0007.png",
+	    "image0008.png",
+	    "Nft_InputsRequired.png",
+	    "image0006.png",
+	    "image0008.png",
+	    "image0007.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

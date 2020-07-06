@@ -1,0 +1,20 @@
+{
+    commandList = "[{command:@\"KeyDown\", eventNum:2, screenShotFile:@\"Screen0001.png\", text:@\"ControlKey\"}, {command:@\"KeyUp\", eventNum:4, screenShotFile:@\"Screen0001.png\", text:@\"ControlKey\"}, {captureRect:[395, 887, 465, 917], command:@\"Drag\", eventNum:5, hotSpot:[430, 178], imageName:@\"\", infoDict:{folderPath:@\"/PD_PBSJobApp_Page\", imageName:@\"image0001\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0005.png\"}, {captureRect:[1566, 474, 1604, 494], command:@\"Drop\", eventNum:5, hotSpot:[1659, 626], imageName:@\"\", infoDict:{folderPath:@\"/PD_PBSJobApp_Page\", imageName:@\"Drop_location\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0006.png\"}]";
+    generatedCommands = (
+	"KeyDown ControlKey",
+	"KeyUp ControlKey",
+	"Drag \"PD_PBSJobApp_Page/image0001\"",
+	"Drop \"PD_PBSJobApp_Page/Drop_location\""
+    );
+    locallyAddedFiles = {
+	"PD_PBSJobApp_Page" = (
+	    "image0001.png",
+	    "image0001.png",
+	    "Drop_location.png",
+	    "image0001.png",
+	    "Drop_location.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

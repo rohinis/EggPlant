@@ -1,0 +1,48 @@
+{
+    commandList = "[{captureRect:[855, 776, 882, 790], command:@\"Click\", eventNum:2, hotSpot:[867, 298], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"TypeSelector\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"SSH\", screenShotFile:@\"Screen0002.png\", useOCR:@\"NO\"}, {captureRect:[855, 725, 896, 739], command:@\"Click\", eventNum:4, hotSpot:[887, 344], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"HTTPS\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"HTTPS\", screenShotFile:@\"Screen0004.png\", useOCR:@\"NO\"}, {captureRect:[1017, 734, 1087, 764], command:@\"Click\", eventNum:6, hotSpot:[1052, 331], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"txtBx_ClusterName_http\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0006.png\"}, {command:@\"TypeText\", eventNum:9, screenShotFile:@\"Screen0009.png\", text:@\"\\\"CR\\\"\"}, {command:@\"KeyUp\", eventNum:13, screenShotFile:@\"Screen0009.png\", text:@\"ShiftKey\"}, {captureRect:[1032, 706, 1102, 736], command:@\"Click\", eventNum:14, hotSpot:[1067, 359], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"txtBx_ClusterInfo_http\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0014.png\"}, {command:@\"TypeText\", eventNum:16, screenShotFile:@\"Screen0016.png\", text:@\"\\\"https\\\"\"}, {command:@\"TypeText\", eventNum:27, screenShotFile:@\"Screen0027.png\", text:@\"\\\":\\\"\"}, {command:@\"KeyUp\", eventNum:29, screenShotFile:@\"Screen0029.png\", text:@\"\\\";\\\"\"}, {command:@\"TypeText\", eventNum:30, screenShotFile:@\"Screen0029.png\", text:@\"\\\"//172.16.80.92\\\"\"}, {command:@\"TypeText\", eventNum:59, screenShotFile:@\"Screen0059.png\", text:@\"\\\":\\\"\"}, {command:@\"KeyUp\", eventNum:61, screenShotFile:@\"Screen0061.png\", text:@\"\\\";\\\"\"}, {command:@\"TypeText\", eventNum:62, screenShotFile:@\"Screen0061.png\", text:@\"\\\"443\\\"\"}, {captureRect:[1015, 675, 1085, 705], command:@\"Click\", eventNum:68, hotSpot:[1050, 390], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"image0001\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0068.png\"}, {command:@\"TypeText\", eventNum:70, screenShotFile:@\"Screen0070.png\", text:@\"\\\"rohini\\\"\"}, {captureRect:[995, 645, 1065, 675], command:@\"Click\", eventNum:82, hotSpot:[1030, 420], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"image0002\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0082.png\"}, {command:@\"TypeText\", eventNum:84, screenShotFile:@\"Screen0084.png\", text:@\"\\\"rohini\\\"\"}, {captureRect:[870, 478, 892, 488], command:@\"Click\", eventNum:96, hotSpot:[890, 594], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"image0003\", searchType:@\"Tolerant\", waitFor:@\"\"}, screenShotFile:@\"Screen0096.png\"}, {captureRect:[858, 711, 987, 728], command:@\"Click\", eventNum:98, hotSpot:[980, 359], imageName:@\"\", infoDict:{folderPath:@\"/ClusterElements\", imageName:@\"https172168092443\", searchType:@\"Smooth\", waitFor:@\"\"}, OCRText:@\"https://172.16.80.92:443\", screenShotFile:@\"Screen0098.png\", useOCR:@\"NO\"}]";
+    generatedCommands = (
+	"Click \"ClusterElements/TypeSelector\"",
+	"Click \"ClusterElements/HTTPS\"",
+	"Click \"ClusterElements/txtBx_ClusterName_http\"",
+	"TypeText \"CR\"",
+	"KeyUp ShiftKey",
+	"Click \"ClusterElements/txtBx_ClusterInfo_http\"",
+	"TypeText \"https\"",
+	"TypeText \":\"",
+	"KeyUp \";\"",
+	"TypeText \"//172.16.80.92\"",
+	"TypeText \":\"",
+	"KeyUp \";\"",
+	"TypeText \"443\"",
+	"Click \"ClusterElements/image0001\"",
+	"TypeText \"rohini\"",
+	"Click \"ClusterElements/image0002\"",
+	"TypeText \"rohini\"",
+	"Click \"ClusterElements/image0003\"",
+	"Click \"ClusterElements/https172168092443\""
+    );
+    locallyAddedFiles = {
+	"" = (
+	);
+	ClusterElements = (
+	    "TypeSelector.png",
+	    "txtBx_ClusterName_http.png",
+	    "txtBx_ClusterInfo_http.png",
+	    "TypeSelector.png",
+	    "HTTPS.png",
+	    "HTTPS.png",
+	    "txtBx_ClusterName_http.png",
+	    "txtBx_ClusterInfo_http.png",
+	    "image0001.png",
+	    "image0001.png",
+	    "image0002.png",
+	    "image0002.png",
+	    "image0003.png",
+	    "image0003.png",
+	    "https172168092443.png",
+	    "https172168092443.png"
+	);
+    };
+    sessionType = turboSession;
+    unnamedImageCount = <*I0>;
+}

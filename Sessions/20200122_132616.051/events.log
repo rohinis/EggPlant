@@ -1,0 +1,100 @@
+1	-0	start	
+2	1.555	mouseDown	{button:1, clickCount:1, hotSpot:[867.647534, 297.667845]}
+3	1.703	mouseUp	{button:1, clickCount:1, hotSpot:[867.647534, 297.667845]}
+4	3.074	mouseDown	{button:1, clickCount:1, hotSpot:[887.825384, 343.462898]}
+5	3.29	mouseUp	{button:1, clickCount:1, hotSpot:[887.825384, 343.462898]}
+6	5.672	mouseDown	{button:1, clickCount:1, hotSpot:[1052.352466, 330.106007]}
+7	5.894	mouseUp	{button:1, clickCount:1, hotSpot:[1052.352466, 330.106007]}
+8	7.078	flagsChanged	131072
+9	7.194	keyDown	{modifiers:131072, string:@"C", theKey:@"c"}
+10	7.308	keyUp	{modifiers:131072, string:@"C", theKey:@"c"}
+11	7.308	keyDown	{modifiers:131072, string:@"R", theKey:@"r"}
+12	7.413	keyUp	{modifiers:131072, string:@"R", theKey:@"r"}
+13	7.526	flagsChanged	0
+14	8.595	mouseDown	{button:1, clickCount:1, hotSpot:[1067.873888, 358.727915]}
+15	8.833	mouseUp	{button:1, clickCount:1, hotSpot:[1067.873888, 358.727915]}
+16	9.713	keyDown	{modifiers:0, string:@"h", theKey:@"h"}
+17	9.835	keyUp	{modifiers:0, string:@"h", theKey:@"h"}
+18	9.935	keyDown	{modifiers:0, string:@"t", theKey:@"t"}
+19	10.035	keyUp	{modifiers:0, string:@"t", theKey:@"t"}
+20	10.035	keyDown	{modifiers:0, string:@"t", theKey:@"t"}
+21	10.151	keyUp	{modifiers:0, string:@"t", theKey:@"t"}
+22	10.335	keyDown	{modifiers:0, string:@"p", theKey:@"p"}
+23	10.451	keyUp	{modifiers:0, string:@"p", theKey:@"p"}
+24	10.64	keyDown	{modifiers:0, string:@"s", theKey:@"s"}
+25	10.752	keyUp	{modifiers:0, string:@"s", theKey:@"s"}
+26	10.752	flagsChanged	131072
+27	11.067	keyDown	{modifiers:131072, string:@":", theKey:@";"}
+28	11.183	flagsChanged	0
+29	11.183	keyUp	{modifiers:0, string:@";", theKey:@";"}
+30	11.298	keyDown	{modifiers:0, string:@"/", theKey:@"/"}
+31	11.398	keyUp	{modifiers:0, string:@"/", theKey:@"/"}
+32	11.503	keyDown	{modifiers:0, string:@"/", theKey:@"/"}
+33	11.616	keyUp	{modifiers:0, string:@"/", theKey:@"/"}
+34	11.616	keyDown	{modifiers:0, string:@"1", theKey:@"1"}
+35	11.814	keyUp	{modifiers:0, string:@"1", theKey:@"1"}
+36	11.914	keyDown	{modifiers:0, string:@"7", theKey:@"7"}
+37	11.914	keyUp	{modifiers:0, string:@"7", theKey:@"7"}
+38	12.015	keyDown	{modifiers:0, string:@"2", theKey:@"2"}
+39	12.127	keyUp	{modifiers:0, string:@"2", theKey:@"2"}
+40	12.315	keyDown	{modifiers:0, string:@".", theKey:@"."}
+41	12.433	keyUp	{modifiers:0, string:@".", theKey:@"."}
+42	12.436	keyDown	{modifiers:0, string:@"1", theKey:@"1"}
+43	12.637	keyUp	{modifiers:0, string:@"1", theKey:@"1"}
+44	12.638	keyDown	{modifiers:0, string:@"6", theKey:@"6"}
+45	12.739	keyUp	{modifiers:0, string:@"6", theKey:@"6"}
+46	12.955	keyDown	{modifiers:0, string:@".", theKey:@"."}
+47	13.055	keyUp	{modifiers:0, string:@".", theKey:@"."}
+48	13.255	keyDown	{modifiers:0, string:@"8", theKey:@"8"}
+49	13.355	keyDown	{modifiers:0, string:@"0", theKey:@"0"}
+50	13.455	keyUp	{modifiers:0, string:@"8", theKey:@"8"}
+51	13.455	keyUp	{modifiers:0, string:@"0", theKey:@"0"}
+52	13.756	keyDown	{modifiers:0, string:@".", theKey:@"."}
+53	13.856	keyUp	{modifiers:0, string:@".", theKey:@"."}
+54	14.257	keyDown	{modifiers:0, string:@"9", theKey:@"9"}
+55	14.257	keyUp	{modifiers:0, string:@"9", theKey:@"9"}
+56	14.558	keyDown	{modifiers:0, string:@"2", theKey:@"2"}
+57	14.674	keyUp	{modifiers:0, string:@"2", theKey:@"2"}
+58	16.367	flagsChanged	131072
+59	16.478	keyDown	{modifiers:131072, string:@":", theKey:@";"}
+60	16.594	flagsChanged	0
+61	16.594	keyUp	{modifiers:0, string:@";", theKey:@";"}
+62	17.01	keyDown	{modifiers:0, string:@"4", theKey:@"4"}
+63	17.11	keyUp	{modifiers:0, string:@"4", theKey:@"4"}
+64	17.21	keyDown	{modifiers:0, string:@"4", theKey:@"4"}
+65	17.31	keyUp	{modifiers:0, string:@"4", theKey:@"4"}
+66	17.41	keyDown	{modifiers:0, string:@"3", theKey:@"3"}
+67	17.518	keyUp	{modifiers:0, string:@"3", theKey:@"3"}
+68	19.466	mouseDown	{button:1, clickCount:1, hotSpot:[1050.800323, 389.257951]}
+69	19.697	mouseUp	{button:1, clickCount:1, hotSpot:[1050.800323, 389.257951]}
+70	20.495	keyDown	{modifiers:0, string:@"r", theKey:@"r"}
+71	20.616	keyUp	{modifiers:0, string:@"r", theKey:@"r"}
+72	20.616	keyDown	{modifiers:0, string:@"o", theKey:@"o"}
+73	20.716	keyUp	{modifiers:0, string:@"o", theKey:@"o"}
+74	20.816	keyDown	{modifiers:0, string:@"h", theKey:@"h"}
+75	20.917	keyUp	{modifiers:0, string:@"h", theKey:@"h"}
+76	21.017	keyDown	{modifiers:0, string:@"i", theKey:@"i"}
+77	21.132	keyUp	{modifiers:0, string:@"i", theKey:@"i"}
+78	21.252	keyDown	{modifiers:0, string:@"n", theKey:@"n"}
+79	21.255	keyUp	{modifiers:0, string:@"n", theKey:@"n"}
+80	21.355	keyDown	{modifiers:0, string:@"i", theKey:@"i"}
+81	21.454	keyUp	{modifiers:0, string:@"i", theKey:@"i"}
+82	22.956	mouseDown	{button:1, clickCount:1, hotSpot:[1030.622474, 419.787986]}
+83	23.088	mouseUp	{button:1, clickCount:1, hotSpot:[1030.622474, 419.787986]}
+84	23.972	keyDown	{modifiers:0, string:@"r", theKey:@"r"}
+85	24.089	keyUp	{modifiers:0, string:@"r", theKey:@"r"}
+86	24.236	keyDown	{modifiers:0, string:@"o", theKey:@"o"}
+87	24.236	keyUp	{modifiers:0, string:@"o", theKey:@"o"}
+88	24.389	keyDown	{modifiers:0, string:@"h", theKey:@"h"}
+89	24.389	keyUp	{modifiers:0, string:@"h", theKey:@"h"}
+90	24.556	keyDown	{modifiers:0, string:@"i", theKey:@"i"}
+91	24.721	keyUp	{modifiers:0, string:@"i", theKey:@"i"}
+92	24.858	keyDown	{modifiers:0, string:@"n", theKey:@"n"}
+93	24.859	keyUp	{modifiers:0, string:@"n", theKey:@"n"}
+94	24.991	keyDown	{modifiers:0, string:@"i", theKey:@"i"}
+95	25.107	keyUp	{modifiers:0, string:@"i", theKey:@"i"}
+96	26.325	mouseDown	{button:1, clickCount:1, hotSpot:[890.929669, 593.427562]}
+97	26.541	mouseUp	{button:1, clickCount:1, hotSpot:[890.929669, 593.427562]}
+98	33.836	mouseDown	{button:1, clickCount:1, hotSpot:[980.953921, 358.727915]}
+99	33.952	mouseUp	{button:1, clickCount:1, hotSpot:[980.953921, 358.727915]}
+100	37.057	end	

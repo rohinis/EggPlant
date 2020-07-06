@@ -1,0 +1,20 @@
+﻿2020-07-06 09:26:08.706 +0530	START		Running MasterScript.script
+2020-07-06 09:26:11.852 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2020-07-06 09:26:11.859 +0530	BeginTestCase		Job_Submission_DynamicAppDef_Default_Values_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2020-07-06 09:26:12.009 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:12.044 +0530	imagefound	PD_Icn_Settings	found at (1863, 317)	5	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:12.073 +0530	moveto		at (1863, 317)	7	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:12.855 +0530	click		at (1863, 317)	9	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:12.952 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:13.758 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1764, 340)	16	on_accesssettings	AccessSettings.script
+2020-07-06 09:26:14.609 +0530	imagefound	PD_ProfilesPage/Lable_Optistruct_Selected	found at (1581, 583)	13	on_gotoapplicaiton	GoToApplicaiton.script
+2020-07-06 09:26:14.786 +0530	imagefound	PD_ProfilesPage/Lable_Optistruct	found at (1582, 584)	13	on_gotoapplicaiton	GoToApplicaiton.script
+2020-07-06 09:26:14.921 +0530	doubleclick		at (1582, 584)	14	on_gotoapplicaiton	GoToApplicaiton.script
+2020-07-06 09:26:15.620 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found #1 at (1572, 372)	15	on_gotoapplicaiton	GoToApplicaiton.script
+2020-07-06 09:26:15.850 +0530	waitfor	PD_PBSJobApp_Page/DropDown_SelectServer	found at (1572, 372)	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2020-07-06 09:26:15.985 +0530	click	PD_PBSJobApp_Page/DropDown_SelectServer	at (1572, 372)	16	on_jsdynamicappdef	JSDynamicAppDef.script
+2020-07-06 09:26:18.391 +0530	LogWarning		Unable to Find Image(s): SelectServer_CR.png -- AutoUpdate engaged	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2020-07-06 09:26:24.888 +0530	Exception	PD_PBSJobApp_Page/SelectServer_CR	Unable To Find Any Image On Screen "PD_PBSJobApp_Page/SelectServer_CR" within 2.00 seconds	17	on_jsdynamicappdef	JSDynamicAppDef.script
+2020-07-06 09:26:24.995 +0530	EndTestCase		(Duration:"13.134", Errors:"1", Exceptions:"1", StartTime:"2020-07-06 09:26:11 +0530", Successes:"0", TestCase:"Job_Submission_DynamicAppDef_Default_Values_ShowJobProfiles", Warnings:"1")
+2020-07-06 09:26:24.999 +0530	EndTestCase		(Duration:"16.286", Errors:"1", Exceptions:"1", StartTime:"2020-07-06 09:26:08 +0530", Successes:"0", TestCase:"MasterScript.script", Warnings:"1")
+2020-07-06 09:26:25.198 +0530	FAILURE	Screen_Error.png	Image Not Found waitfor Error - Unable To Find Any Image On Screen "PD_PBSJobApp_Page/SelectServer_CR" within 2.00 seconds -- Execution Time 0:00:16 MasterScript.script

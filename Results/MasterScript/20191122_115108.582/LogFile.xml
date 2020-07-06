@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-22 11:51:08.582 +0530"
+ tests="4" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2019-11-22 11:51:08.582 +0530"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Default_Values " assertions="1" successes="1" errors="0" time="25.916">
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Non-Default_Values " assertions="1" successes="0" errors="1" time="76.014">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_File_SelectFile " assertions="1" successes="0" errors="1" time="20.3">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="3" successes="1" errors="2" time="123.365">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+ </testsuite>
+</testsuites>

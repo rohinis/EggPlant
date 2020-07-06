@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2020-07-06 10:08:56.349 +0530"
+ tests="2" successes="1" errors="0" time="26.622000">
+  <properties>
+   <property name="RunDate" value="2020-07-06 10:08:56.349 +0530"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="Job_Submission_CompleteAppDef_From_UI_DragAndDrop_File_NewJob" assertions="0" successes="0" errors="0" time="26.134">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="1" successes="1" errors="0" time="26.62">
+  </testcase>
+ </testsuite>
+</testsuites>

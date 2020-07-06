@@ -1,0 +1,42 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-28 10:11:05.518 +0530"
+ tests="10" successes="2" errors="7" time="609.089000">
+  <properties>
+   <property name="RunDate" value="2019-11-28 10:11:05.518 +0530"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Default_Values " assertions="1" successes="1" errors="0" time="29.635">
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Non-Default_Values " assertions="1" successes="0" errors="1" time="83.903">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_File_SelectFile " assertions="1" successes="1" errors="0" time="37.421">
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_File_DND " assertions="1" successes="0" errors="1" time="98.757">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_DynamicCompleteSpChar " assertions="1" successes="0" errors="1" time="77.638">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_DynamicCompleteSpace " assertions="1" successes="0" errors="1" time="79.855">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Alphanumeric " assertions="1" successes="0" errors="1" time="75.416">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_IncludeFile_SelectFile " assertions="1" successes="0" errors="1" time="85.998">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_BLANK " assertions="1" successes="0" errors="1" time="38.24">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="9" successes="2" errors="7" time="609.088">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+ </testsuite>
+</testsuites>

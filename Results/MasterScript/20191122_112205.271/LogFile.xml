@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-22 11:22:05.271 +0530"
+ tests="11" successes="9" errors="1" time="222.527000">
+  <properties>
+   <property name="RunDate" value="2019-11-22 11:22:05.271 +0530"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles" assertions="1" successes="1" errors="0" time="23.288">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_Select_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="23.549">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_UI_DragAndDrop_File_ShowJobProfiles" assertions="1" successes="1" errors="0" time="26.784">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_Overwrite_ShowJobProfiles" assertions="1" successes="1" errors="0" time="19.677">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_NoIncludes_ShowJobProfiles" assertions="1" successes="1" errors="0" time="15.632">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_NonDefault_ShowJobProfiles" assertions="1" successes="1" errors="0" time="21.44">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_AllFileds_ShowJobProfiles" assertions="1" successes="1" errors="0" time="20.06">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_ShowJobProfiles" assertions="1" successes="1" errors="0" time="17.241">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_From_RequiredFileds_NonDefaults_ShowJobProfiles" assertions="1" successes="1" errors="0" time="23.853">
+  </testcase>
+  <testcase name="Job_Submission_DynamicComplete_ProfileAppDef_WithFile_ShowJobProfiles" assertions="1" successes="0" errors="1" time="27.927">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="10" successes="9" errors="1" time="222.527">
+  </testcase>
+ </testsuite>
+</testsuites>

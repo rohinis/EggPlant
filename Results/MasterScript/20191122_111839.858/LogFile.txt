@@ -1,0 +1,16 @@
+﻿2019-11-22 11:18:39.874 +0530	START		Running MasterScript.script
+2019-11-22 11:18:42.031 +0530	Log		++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	13	on_02master_js	02Master_JS.script
+2019-11-22 11:18:42.031 +0530	BeginTestCase		Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles	14	on_02master_js	02Master_JS.script
+2019-11-22 11:18:42.147 +0530	Log		Access Settings	4	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:42.178 +0530	imagefound	PD_Icn_Settings	found at (1884, 354)	5	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:42.326 +0530	moveto		at (1884, 354)	7	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:43.149 +0530	click		at (1884, 354)	9	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:43.195 +0530	Log		Show Job Profile	15	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:44.150 +0530	click	PD_HomePage_Lables/Lable_ShowJobProfiles	at (1785, 377)	16	on_accesssettings	AccessSettings.script
+2019-11-22 11:18:47.540 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA	Unable to Find Image PD_Created_Profiles/Lable_NewProDA	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:18:50.059 +0530	imagefound	PD_Created_Profiles/Lable_NewProDA_Selected	Unable to Find Image PD_Created_Profiles/Lable_NewProDA_Selected	86	on_gotoapplicaiton	GoToApplicaiton.script
+2019-11-22 11:19:05.413 +0530	LogWarning		Unable to Find Image(s): DropDown_SelectServer.png -- AutoUpdate engaged	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:19:09.132 +0530	Exception	PD_PBSJobApp_Page/DropDown_SelectServer	Unable To Find Any Image On Screen "PD_PBSJobApp_Page/DropDown_SelectServer" within 15.00 seconds	15	on_jsdynamicappdef	JSDynamicAppDef.script
+2019-11-22 11:19:09.459 +0530	EndTestCase		(Duration:"27.428", Errors:"1", Exceptions:"1", StartTime:"2019-11-22 11:18:42 +0530", Successes:"0", TestCase:"Job_Submission_DynamicComplete_ProfileAppDef_NonDefault_Values_ShowJobProfiles", Warnings:"1")
+2019-11-22 11:19:09.459 +0530	EndTestCase		(Duration:"29.585", Errors:"1", Exceptions:"1", StartTime:"2019-11-22 11:18:39 +0530", Successes:"0", TestCase:"MasterScript.script", Warnings:"1")
+2019-11-22 11:19:09.606 +0530	FAILURE	Screen_Error.png	Image Not Found waitfor Error - Unable To Find Any Image On Screen "PD_PBSJobApp_Page/DropDown_SelectServer" within 15.00 seconds -- Execution Time 0:00:30 MasterScript.script

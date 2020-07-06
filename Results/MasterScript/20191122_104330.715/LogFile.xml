@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="MasterScript.script" package="AccessDesktopRegression.suite" timestamp="2019-11-22 10:43:30.715 +0530"
+ tests="10" successes="0" errors="9" time="719.659000">
+  <properties>
+   <property name="RunDate" value="2019-11-22 10:43:30.715 +0530"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Default_Values " assertions="1" successes="0" errors="1" time="74.295">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Non-Default_Values " assertions="1" successes="0" errors="1" time="84.449">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_File_SelectFile " assertions="1" successes="0" errors="1" time="84.131">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_File_DND " assertions="1" successes="0" errors="1" time="101.264">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_DynamicCompleteSpChar " assertions="1" successes="0" errors="1" time="79.685">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_DynamicCompleteSpace " assertions="1" successes="0" errors="1" time="81.484">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_Alphanumeric " assertions="1" successes="0" errors="1" time="80.198">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_IncludeFile_SelectFile " assertions="1" successes="0" errors="1" time="89.632">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+  <testcase name=" Profiles_Create_Profile_DynamicComplete_BLANK " assertions="1" successes="0" errors="1" time="42.62">
+  </testcase>
+  <testcase name="MasterScript.script" assertions="9" successes="0" errors="9" time="719.656">
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+    <failure type="LogError">Optional Fileds NOT Displayed</failure>
+  </testcase>
+ </testsuite>
+</testsuites>

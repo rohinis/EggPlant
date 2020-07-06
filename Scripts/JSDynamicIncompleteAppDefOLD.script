@@ -1,0 +1,129 @@
+﻿
+
+params Type 
+
+
+If Type = "Non-Default"  then 
+	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	Click "PD_Optistruct_App_Page/Lable_NCPU"
+	TypeText controlKey, "a"
+	TypeText "2"
+	
+	Click "PD_Optistruct_App_Page/Lable_Mem"
+	TypeText controlKey, "a"
+	TypeText "120"
+	
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+	TypeText "new"
+	
+	get Select_File.Select_Master_File 
+	If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) then 
+		Log " Master File selected "
+	End If
+	
+	put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_IncludeFiles_DynFld" ) into flag
+	
+	If flag="Pass"
+		Log "Dynamic Filed Shown"
+	else 
+		Log"Dynamic Filed Not Shown"
+		Exit handler
+	end if 
+	
+	put WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+	If flag="Pass"
+		Log "Dynamic Files Pupolated"
+	else 
+		Log"Dynamic Files Not Pupolated"
+		Exit handler
+	end if 
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *	
+	
+Else if Type=DND then 
+	
+	
+	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+	TypeText "new"
+	
+	get Select_File.Select_Master_File_DND
+	If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) then 
+		Log " Master File selected "
+	End If
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+Else if Type="Default" then
+	
+	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+	TypeText "new"
+	
+	get Select_File.Select_Master_File 
+	If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) then 
+		Log " Master File selected "
+	End If
+	
+	put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_IncludeFiles_DynFld" ) into flag
+	If flag="Pass"
+		Log "Dynamic Filed Shown"
+	else 
+		Log"Dynamic Filed Not Shown"
+		Exit handler
+	end if 
+	
+	put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+	If flag="Pass"
+		Log "Dynamic Files Pupolated"
+	else 
+		Log"Dynamic Files Not Pupolated"
+		Exit handler
+	end if 
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+	--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+	
+Else if Type="Profie_With_File" then	
+	
+	
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	--- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Else
+	
+	DoubleClick   "Dekstop_Images/InputFolder", 
+	wait 2
+	RightClick "Dekstop_Images/InputFile_MasterFile.fem",   
+	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3)
+	Click (Image :"Dekstop_Images/ContextSubMenu_DynamicInCompleteApp", WaitFor:3)
+	
+	Set the SearchRectangle to (1620,0,1920,123)
+	WaitFor 25,  "Notifications/Nft_InputsRequired"
+	moveto "Notifications/Nft_InputsRequired"
+	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
+	set the SearchRectangle to ()
+	Log "**************************************************************************"
+	Log "Notification  - " &InputRequiredMsg
+	Log "**************************************************************************"
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
+	TypeText "new"
+	Click "Dekstop_Images/InputFile_MasterFile.fem", 
+	Click "Dekstop_Images/Folder_close"
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+End If
+
+
+if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+	Log "Navigated to Summary Page"
+	JobSubmission_Notification
+else 
+	LogError "Still on Profile Page"
+	CaptureScreen 
+end if
+

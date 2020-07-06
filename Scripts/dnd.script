@@ -1,0 +1,11 @@
+(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2019-06-04 14:23:03
+  From session:  dnd
+  Captured on:  2019-06-04 14:20:26
+  From server:  TestServer
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+KeyDown ControlKey
+KeyUp ControlKey
+Drag "PD_PBSJobApp_Page/image0001"
+Drop "PD_PBSJobApp_Page/Drop_location"

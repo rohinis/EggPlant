@@ -1,0 +1,51 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2019-09-09 10:03:05.746 +0530,"Running",0:00:00,,,,"20190909_100305.746/LogFile.txt","","",
+2019-09-09 10:04:09.224 +0530,"Failure",0:00:12,1,1,1,"20190909_100409.224/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_PBSJobApp_Page/Btn_SaveProfile""",0
+2019-09-09 10:04:53.707 +0530,"Failure",0:00:13,1,1,1,"20190909_100453.707/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_PBSJobApp_Page/Btn_SaveProfile""",0
+2019-09-09 10:06:17.623 +0530,"Running",0:00:00,,,,"20190909_100617.623/LogFile.txt","","",
+2019-09-09 10:12:28.062 +0530,"Running",0:00:00,,,,"20190909_101228.062/LogFile.txt","","",
+2019-09-09 10:17:41.028 +0530,"Running",0:00:00,,,,"20190909_101741.028/LogFile.txt","","",
+2019-09-09 10:24:15.547 +0530,"Failure",0:02:07,1,9,1,"20190909_102415.547/LogFile.txt","","Image Not Found -- drop Error - No Image Found On Screen: ""PD_PBSJobApp_Page/Drop_location""",0
+2019-09-09 10:27:10.309 +0530,"Success",0:04:17,0,25,0,"20190909_102710.309/LogFile.txt","","",1
+2019-09-09 10:34:51.532 +0530,"Failure",0:00:24,1,1,1,"20190909_103451.532/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/DropDown_SelectServer"" within 5.00 seconds",0
+2019-09-09 10:35:33.381 +0530,"Running",0:00:00,,,,"20190909_103533.381/LogFile.txt","","",
+2019-09-09 10:36:29.974 +0530,"Success",0:09:31,0,30,0,"20190909_103629.974/LogFile.txt","","",1
+2019-09-19 14:39:39.130 +0530,"Failure",0:06:19,3,28,1,"20190919_143939.130/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_PBSJobApp_Page/ListItem_QueueNormalPri""",15
+2019-09-20 12:41:13.216 +0530,"Failure",0:07:43,5,31,1,"20190920_124113.216/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",17
+2019-09-20 14:25:40.967 +0530,"Success",0:03:31,0,25,0,"20190920_142540.967/LogFile.txt","","",1
+2019-09-20 14:33:11.247 +0530,"Failure",0:04:40,3,13,1,"20190920_143311.247/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/DropDown_SelectServer"" within 5.00 seconds",0
+2019-09-20 14:41:00.142 +0530,"Running",0:00:00,,,,"20190920_144100.142/LogFile.txt","","",
+2019-09-20 14:41:24.335 +0530,"Failure",0:07:43,5,31,1,"20190920_144124.335/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",17
+2019-11-06 14:32:43.102 +0530,"Failure",0:02:27,1,12,1,"20191106_143243.102/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_PBSJobApp_Page/ListItem_QueueNormalPri""",6
+2019-11-06 14:41:26.456 +0530,"Failure",0:00:01,1,0,1,"20191106_144126.456/LogFile.txt","","No Remote Connection -- imagefound Error - Remote Connection Unavailable",0
+2019-11-06 14:41:44.598 +0530,"Failure",0:07:39,5,31,1,"20191106_144144.598/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",17
+2019-11-06 14:55:49.533 +0530,"Failure",0:00:01,1,0,1,"20191106_145549.533/LogFile.txt","","No Remote Connection -- imagefound Error - Remote Connection Unavailable",0
+2019-11-06 14:56:37.157 +0530,"Failure",0:07:23,5,31,1,"20191106_145637.157/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",17
+2019-11-06 15:07:06.550 +0530,"Running",0:00:00,,,,"20191106_150706.550/LogFile.txt","","",
+2019-11-06 15:10:47.469 +0530,"Failure",0:07:50,5,31,1,"20191106_151047.469/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",17
+2019-11-22 10:25:08.736 +0530,"Failure",0:01:55,1,7,1,"20191122_102508.736/LogFile.txt","","Image Not Found -- drop Error - No Image Found On Screen: ""PD_Optistruct_App_Page/DropLocation_InputFile""",3
+2019-11-22 10:27:53.759 +0530,"Success",0:08:19,0,34,0,"20191122_102753.759/LogFile.txt","","",20
+2019-11-22 10:43:30.715 +0530,"Failure",0:11:59,9,29,1,"20191122_104330.715/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_SaveProfile/Btn_Cancel""",0
+2019-11-22 11:18:39.858 +0530,"Failure",0:00:29,1,1,1,"20191122_111839.858/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/DropDown_SelectServer"" within 15.00 seconds",0
+2019-11-22 11:19:35.790 +0530,"Running",0:00:00,0,0,0,"20191122_111935.790/LogFile.txt","","",0
+2019-11-22 11:20:26.002 +0530,"Running",0:00:00,0,0,0,"20191122_112026.002/LogFile.txt","","",0
+2019-11-22 11:22:05.271 +0530,"Failure",0:03:42,1,17,1,"20191122_112205.271/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/DropDown_SelectServer"" within 15.00 seconds",9
+2019-11-22 11:27:23.215 +0530,"Success",0:06:53,0,35,0,"20191122_112723.215/LogFile.txt","","",21
+2019-11-28 10:11:05.518 +0530,"Failure",0:10:09,7,29,1,"20191128_101105.518/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_SaveProfile/Btn_Cancel""",2
+2019-11-28 10:24:45.318 +0530,"Success",0:08:36,0,35,0,"20191128_102445.318/LogFile.txt","","",21
+2019-11-28 10:35:53.639 +0530,"Failure",0:09:25,2,32,0,"20191128_103553.639/LogFile.txt","","Script Error -- Number of Errors logged: 2",18
+2020-07-06 09:20:28.679 +0530,"Running",0:00:00,0,0,0,"20200706_092028.679/LogFile.txt","","",0
+2020-07-06 09:26:08.702 +0530,"Failure",0:00:16,1,1,1,"20200706_092608.702/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/SelectServer_CR"" within 2.00 seconds",0
+2020-07-06 09:27:44.920 +0530,"Running",0:00:00,0,0,0,"20200706_092744.920/LogFile.txt","","",0
+2020-07-06 09:29:48.078 +0530,"Running",0:00:00,0,0,0,"20200706_092948.078/LogFile.txt","","",0
+2020-07-06 09:53:43.112 +0530,"Failure",0:00:08,1,1,1,"20200706_095343.112/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_HomePage_Lables/Lable_NewJob""",0
+2020-07-06 09:54:30.782 +0530,"Failure",0:00:46,1,1,1,"20200706_095430.782/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""PD_PBSJobApp_Page/Lable_NCPU_Bold""",0
+2020-07-06 09:59:32.431 +0530,"Failure",0:00:33,1,2,1,"20200706_095932.431/LogFile.txt","","Image Not Found -- waitfor Error - Unable To Find Any Image On Screen ""PD_PBSJobApp_Page/SelectServer_CR"" within 2.00 seconds",0
+2020-07-06 10:01:32.518 +0530,"Running",0:00:00,0,0,0,"20200706_100132.518/LogFile.txt","","",0
+2020-07-06 10:01:43.618 +0530,"Running",0:00:00,0,0,0,"20200706_100143.618/LogFile.txt","","",0
+2020-07-06 10:02:17.880 +0530,"Success",0:00:38,0,3,0,"20200706_100217.880/LogFile.txt","","",1
+2020-07-06 10:03:35.834 +0530,"Running",0:00:00,0,0,0,"20200706_100335.834/LogFile.txt","","",0
+2020-07-06 10:03:48.944 +0530,"Running",0:00:00,0,0,0,"20200706_100348.944/LogFile.txt","","",0
+2020-07-06 10:06:46.151 +0530,"Failure",0:00:49,1,2,1,"20200706_100646.151/LogFile.txt","","Image Not Found -- drag Error - No Image Found On Screen: ""Dekstop_Images/InputFile_JobFile_001""",0
+2020-07-06 10:08:56.349 +0530,"Success",0:00:26,0,3,0,"20200706_100856.349/LogFile.txt","","",1
+2020-07-06 10:09:36.437 +0530,"Success",0:01:00,0,4,0,"20200706_100936.437/LogFile.txt","","",2

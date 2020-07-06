@@ -1,0 +1,72 @@
+﻿-- Test case : Job_Submission_CompleteAppDef_From_New_Job
+BeginTestCase Notifications_Job_Submission_Sucessfull
+Run GoToApplicaiton "PBSJobApp" 
+Run Job_Submit "Default"
+EndTestCase Notifications_Job_Submission_Sucessfull
+
+
+
+
+-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+-- Postive and Negative and BLANK
+-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+put ((TestcaseName:"InValid Inputs",servername:"testServer",ip:"blrvm18vm1",username:"cmadmin", passwd:"cmaddadsadsdsmin",type:"1"),(TestcaseName:"Valid Inputs",servername:"testServer",ip:"blrvm18vm1",username:"dummy", passwd:"dummy",type:"0")) into credslist
+
+
+repeat with each creds of credslist 
+	
+	BeginTestCase creds.TestcaseName
+	
+	get Cluster_Registration_Form.Fill_Cluster_Details(creds)
+	
+	if creds.type is in ("0") then
+		put Notifications_ClusterRegistration.Check_Cluster_Notifications  into CR
+		if CR.flag="Pass"
+			Log "**************************************************************************"
+			LogSuccess "Cluster Registeration Sucessfully"
+			Log "**************************************************************************"
+			run AccessSettings 2
+			log it 
+			Run DeleteServer 1 , creds.servername
+		Else 
+			Log "**************************************************************************"
+			LogError "Cluster RegisterationFailed"
+			Log "**************************************************************************"
+			CaptureScreen (Name: "Cluster-Registeration-Failed")
+			get  Cluster_Registration_Form.Clear_Cluster_Form (creds)
+			
+		end if 
+		
+	else if creds.type is in ("1") then
+		
+		put Notifications_ClusterRegistration.Check_Cluster_Notifications  into CR
+		if CR.flag="Pass"
+			
+			Log "**************************************************************************"
+			LogError "Cluster Registeration Sucessfully  - InValid Input Test Case"
+			Log "**************************************************************************"
+			CaptureScreen (Name: "Cluster-Registeration-Successfull-Invalid-Inputs")
+		Else 
+			Log "**************************************************************************"
+			LogSuccess "Cluster Registeration Failed - InValid Input Test Case"
+			Log "**************************************************************************"
+		end if 
+		wait 4
+		get  Cluster_Registration_Form.Clear_Cluster_Form (creds)
+		
+		else 
+		Log "BLANK Input test case "
+		get  Cluster_Registration_Form.Clear_Cluster_Form(creds)
+	end if 
+	
+	EndTestCase creds.TestcaseName
+	
+	
+end repeat 
+
+
+BeginTestCase Notifications_Job_Submission_UnSucessfull
+Run GoToApplicaiton "PBSJobApp" 
+Run Job_Submit "Default"
+EndTestCase Notifications_Job_Submission_UnSucessfull
+

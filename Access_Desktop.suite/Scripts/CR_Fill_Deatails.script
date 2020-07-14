@@ -1,0 +1,142 @@
+﻿function Fill_Cluster_Details_Sanity creds
+	
+	log	"serverName  ----   "	&creds.serverName
+	log	"hostName  ----  "	&creds.hostName
+	log	"userName  ----  "	& creds.userName
+	log	"passwd  ---- " &	creds.passwd
+	log	"Stage   ----  " &	creds.Stage
+	log	"CetralRepo ---- "	&creds.CentralRepo
+	log	"Set	  ----  "	&creds.Set
+	
+	--WaitFor 8.0, "ClusterElements/txtbxCentralRepo", "ClusterElements/txtbxCentralRepo"
+	
+	
+	Log "Form Fill Server Details "
+	
+	Click ("ClusterElements/txtbxClusterName")
+	--Click (image: "ClusterElements/txtbxClusterName", scale: 0.5 to 1.5 by .25) 
+	TypeText  creds.serverName
+	
+	Click (image: "ClusterElements/txtbxHostName", scale: 0.5 to 1.5 by .25)
+	Log foundImageInfo().Scale 
+	TypeText creds.hostName
+	
+	
+	Click ("ClusterElements/txtbxUserName")
+	TypeText creds.userName
+	
+	Click "AddCluster/AddCluster_StageRoot"
+	TypeText controlKey, "a"
+	Typetext backspace
+	typetext creds.stage	
+	
+	Click ("ClusterElements/txtbxPasswd")
+	TypeText creds.passwd
+	
+	
+	
+	put creds.set into settype
+	
+	if settype ="SkipPasswd" then 
+		repeat while imageFound("ChkBox")
+			Click  foundImageLocation()
+			exit repeat 
+		end repeat
+		
+	else if  settype="SSH" then 
+		
+		Click "ClusterElements/DropDownArrow"
+		Click "ClusterElements/ListItemSSHKey"
+		Click "ClusterElements/BtnImportKey"
+		doubleclick  "PD_PBSJobApp_Page/InputFolder_Desktop"
+		
+		if creds.TestcaseName="Cluster_Registration_With_Password_Incorrect_SSHEnabed" then 
+			click "Dekstop_Images/WinExplorer_IncorrectSSHKeys"
+			click "Dekstop_Images/WinExplorer_Open"
+			
+		else if creds.TestcaseName="Cluster_Registration_No_Key_Selected_SSHEnabed" then 
+			
+			log "Dont select key "
+		else 
+			click "Dekstop_Images/WinExplorer_SSHKeys"
+			click "Dekstop_Images/WinExplorer_Open", 
+			
+		end if 
+		
+		if imagefound("ClusterElements/LblSSHKey") then 
+			log "Key Selected "
+		end if
+		
+	end if 
+	
+	
+	
+	if  creds.CentralRepo="Auto" then 
+		
+		log "Auto central repo"	
+	else 
+		Click "AddCluster/AddCluster_CentralRepo"
+		TypeText controlKey, "a"
+		Typetext backspace
+		typetext creds.CentralRepo
+	
+end if
+
+
+repeat while imageFound("Btn-SR-Add")
+	if imagefound( "Btn-SR-Add/Btn-Add-Inactive")
+	LogSuccess "Add Button in Inactive --  BLANK Input" 
+		end if
+		Click  foundImageLocation()
+		exit repeat 
+	end repeat
+	
+	
+	
+end Fill_Cluster_Details_Sanity
+
+
+
+function Clear_Cluster_Form_Sanity creds
+	put creds.set into settype
+	Click ("ClusterElements/txtbxClusterName")
+	TypeText controlKey, "a"
+	Typetext backspace
+	
+	Click ("ClusterElements/txtbxHostName")
+	TypeText controlKey, "a"
+	Typetext backspace
+	
+	Click ("ClusterElements/txtbxUserName")
+	TypeText controlKey, "a"
+	Typetext backspace
+	
+	if settype ="SSH" then
+		Click "ClusterElements/DropDownArrow"
+		Click  "ClusterElements/ListItemPassword"
+	end if 
+	
+	if settype ="SavePasswd" or settype="SkipPasswd" then 
+		Click ("ClusterElements/txtbxPasswd")
+		TypeText controlKey, "a"
+		Typetext backspace
+		Typetext backspace
+	end if
+	
+	if settype="Stage" then 
+		
+		Click ("ClusterElements/txtbxPasswd")
+		--put creds.passwd
+		TypeText controlKey, "a"
+		Typetext backspace
+		--TypeText "dmuser", 
+		Click "AddCluster/AddCluster_StageRoot"
+		TypeText controlKey, "a"
+		Typetext backspace
+	end if
+	
+	
+	Log "from clear fields"
+	
+end Clear_Cluster_Form_Sanity
+

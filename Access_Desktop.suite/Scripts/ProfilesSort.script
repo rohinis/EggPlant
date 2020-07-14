@@ -1,0 +1,11 @@
+﻿
+function SortType  Order
+	if imagefound("PD_ProfilesPage/Lable_TypeProfileSorted") then 
+		exit handler 
+	Else 
+		Click  "PD_ProfilesPage/Lable_Type"	
+	end if
+	return "Done"
+end SortType
+
+

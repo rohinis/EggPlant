@@ -1,0 +1,58 @@
+﻿
+BeginTestCase LastSubmitted
+
+
+DoubleClick (Image:"Dekstop_Images/InputFolder", scale: 0.5 to 1.5 by .25)
+RightClick (Image:"Dekstop_Images/InputFile_JobFile_sh")
+
+Click (Image:"Dekstop_Images/ContextMenu_Process_with")
+Click(Image:"Dekstop_Images/ContextSubMenu_PBSJobApp")
+Click  (Image:"Dekstop_Images/InputFile_JobFile_sh")
+Click (Image:"Dekstop_Images/Folder_close" )
+
+
+put Notifications.Check_Notifications into JS
+
+put JS.JobID into jobID
+
+Log "**************************************************************************"
+Log "JobID  - " &jobID
+Log "**************************************************************************" 
+
+put WaitFunction.CheckWait (Text:"Last Submitted Job:",ValidWords:"*")
+
+
+
+set (x, y) to (120, 5) 
+MoveTo (Text:"Last Submitted Job:",ValidWords:"*", HotSpot:(x, y)) 
+--Click (Text:"Last Submitted Job:",ValidWords:"*",  HotSpot:(x, y)) 
+
+put readtext (Text:"Last Submitted Job:",ValidWords:"*",  HotSpot:(x, y)) into LS
+
+log " LS " & LS 
+
+
+set the wordDelimiter to " ."  & space 
+put word 1 of LS into ID
+put "******************************************************************"
+put "Job ID  Last wala- " & ID
+put "******************************************************************"
+
+(*
+
+--put FromLastSubmitted() into FromFunction
+log "++++++++++++++++++++++++++++++++++++++++"
+Log "JobID from Notification  --- " & jobID
+Log "JobID from Last Submitted --- " &FromFunction
+log "++++++++++++++++++++++++++++++++++++++++"
+
+if jobID=FromFunction then 
+	LogSuccess "The Last submitted shows correct job ID "
+else
+	LogError "Job ID Incorrect "
+	
+end if*)
+EndTestCase LastSubmitted
+
+
+

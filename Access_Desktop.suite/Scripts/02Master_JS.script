@@ -1,0 +1,70 @@
+﻿params testDataFile , module
+
+set myExcelDB to table (module) of (type:"excel", file:testDataFile)
+put the records of myExcelDB into DataSet
+
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		if testData.submitType="Context" then 
+			log "Context menu Submission"
+			Run toRun testData.submitType
+		else
+			Run GoToApplicaiton  testData.applicationName , testData.path	
+			Run toRun testData.submitType		
+		end if
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+
+
+
+
+(*
+Try
+	set myExcelDB to table ("JSP") of (type:"excel", file:"D:\EggPlant\Test.xlsx")
+	put the records of myExcelDB into DataSet
+	put the number of items in DataSet into totalItems
+	
+	repeat totalItems times
+		
+		set testData to item repeatIndex() of DataSet
+		
+		if testData.toRun="Yes" then 
+			Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+			BeginTestCase testData.TestcaseName
+			
+			put testData.scriptName into toRun
+			
+			if testData.submitType="Context" then 
+				log "Context menu Submission"
+				Run toRun testData.submitType
+			else
+				Run GoToApplicaiton  testData.applicationName , testData.path	
+				Run toRun testData.submitType		
+			end if
+			EndTestCase testData.TestcaseName
+			Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		end if
+		
+	end Repeat
+	
+Catch exception
+	
+	put exception
+	
+	
+End try
+*)

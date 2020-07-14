@@ -1,0 +1,109 @@
+﻿
+params Type
+
+if Type="Context" then 
+	DoubleClick (Image:"Dekstop_Images/InputFolder")
+	RightClick (Image:"Dekstop_Images/InputFile_JobFile_sh")
+	// "Dekstop_Images/InputFolder"
+	Click (Image:"Dekstop_Images/ContextMenu_Process_with")
+	Click(Image:"Dekstop_Images/ContextSubMenu_PBSJobApp")
+	Click  (Image:"Dekstop_Images/InputFile_JobFile_sh")
+	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+	--	WaitFor 2, "Dekstop_Images/Folder_close_Red" , "Dekstop_Images/Folder_close_Red"
+	Click "Dekstop_Images/Folder_close_Red" 
+	
+Else 
+	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
+--	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+--	moveto (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
+	--Click (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
+	--Click "PD_PBSJobApp_Page/SelectServer_CR"
+	
+	If Type = "Non-Default"  then 
+		
+		Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
+		TypeText controlKey, "a"
+		TypeText "2"
+		Click "PD_PBSJobApp_Page/Lable_Memory_Bold"
+		TypeText controlKey, "a"
+		TypeText "120"
+		get Select_File.Select_Job_File
+		
+		
+	Else if Type=DND then 
+		get Select_File.DragAndDrop_File 
+		
+	Else if Type="Default" then			
+		get Select_File.Select_Job_File
+		
+	Else if Type="Profie_With_File" then
+		log "Job Submission from file wala profile"
+		
+	Else If Type="All" then 
+		--Click "PD_PBSJobApp_Page/Lable_ReqFileds" ,"PD_PBSJobApp_Page/Lables_OptionalFileds"
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		
+		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lables_OptionalFileds" ) into flag
+		
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		
+		get Select_File.Select_Job_File
+		
+	Else If Type="AllNonDef" then 	
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lables_OptionalFileds") into flag
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Job_File
+		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown", 
+		-- "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		
+	Else if Type="Req" then
+		
+		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
+		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lable_OnlyReqdFileds") into flag
+		
+		If flag="Pass"
+			Log "Only Required Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Job_File
+		
+	End If
+	
+	If imagefound ( "PD_PBSJobApp_Page/InputFile_Selected" ) or ImageFound("PD_PBSJobApp_Page/Drop_location_JobScript") then 
+		Log "File Listed" 
+	else 
+		LogError "File not Listed"
+		
+	End if 
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+End if 
+
+
+(*
+if Type = "Context" then 
+	JobSubmission_Notification	
+	
+Else 
+	if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+		Log "Navigated to Summary Page"
+		JobSubmission_Notification
+	else 
+		LogError "Still on Profile Page"
+		CaptureScreen 
+	end if
+end if*)

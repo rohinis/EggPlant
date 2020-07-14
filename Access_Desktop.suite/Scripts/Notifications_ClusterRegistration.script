@@ -1,0 +1,68 @@
+﻿function Check_Cluster_Notifications 
+
+
+
+	Set the SearchRectangle to (1620,0,1920,123)
+	--setlogging off
+	moveto  (1900,90)
+	repeat  35 seconds 
+		--while imageFound("Notifications")
+		
+		
+		if imagefound  ("Notifications/GreenTick1")
+			put Pass into Flag 
+			put   foundImageLocation() into Location
+			log "Location " &Location
+			moveto Location
+			--moveto text:"Central"
+			
+			put readText(Location + (20,10) ) into JobSucess
+			
+			Log "**************************************************************************"
+			Log "Notification  - " &JobSucess
+			Log "**************************************************************************"
+			
+			if JobSucess="Application definitions are updated"
+				Log "CP Done"
+			end if
+			
+			--RunWithNewResults "ClearFields"
+			set the wordDelimiter to " ." & space & tab
+			put word 3 of JobSucess into jobID
+			--			put jobID
+			put ((JobID:jobID,Flag:"Pass")) into JS
+			
+			
+			
+			exit repeat
+			
+		else if imagefound ( "Notifications/RedCrossSmall")
+			put Fail into Flag 
+			put   foundImageLocation() into Location
+			log "Location " &Location
+			put readText(Location + (50,5), ) into ErrorMsg
+			
+			Log "**************************************************************************"
+			Log "Notification  - " &ErrorMsg
+			Log "**************************************************************************"
+			
+			
+			put ((JobID:ErrorMsg,Flag:"Fail")) into JS
+			
+			
+			
+			
+			exit repeat 
+		end if
+	end repeat
+	--setlogging on
+	
+	set the SearchRectangle to ()
+	
+	
+	
+	return JS
+	
+	
+end  Check_Cluster_Notifications
+

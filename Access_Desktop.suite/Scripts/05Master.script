@@ -1,0 +1,112 @@
+﻿
+set myExcelDB to table ("CR") of (type:"excel", file:"D:\EggPlant\TestSanity.xlsx")
+put the records of myExcelDB into DataSet
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		Run toRun testData
+		
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+-- ==================================================================================================================
+
+
+set myExcelDB to table ("JS") of (type:"excel", file:"D:\EggPlant\TestSanity.xlsx")
+put the records of myExcelDB into DataSet
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		if testData.submitType="Context" then 
+			log "Context menu Submission"
+			Run toRun testData.submitType
+		else
+			Run GoToApplicaiton  testData.applicationName , testData.path	
+			Run toRun testData.submitType		
+		end if
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+-- ==================================================================================================================
+
+
+set myExcelDB to table ("CP") of (type:"excel", file:"D:\EggPlant\TestSanity.xlsx")
+put the records of myExcelDB into DataSet
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		Run GoToApplicaiton  testData.applicationName , testData.path	
+		Run toRun testData.profileName , testData.protype , testData.Image
+		
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+
+-- ==================================================================================================================
+
+
+set myExcelDB to table ("JSP") of (type:"excel", file:"D:\EggPlant\TestSanity.xlsx")
+put the records of myExcelDB into DataSet
+put the number of items in DataSet into totalItems
+
+repeat totalItems times
+	
+	set testData to item repeatIndex() of DataSet
+	
+	if testData.toRun="Yes" then 
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+		BeginTestCase testData.TestcaseName
+		
+		put testData.scriptName into toRun
+		
+		if testData.submitType="Context" then 
+			log "Context menu Submission"
+			Run toRun testData.submitType
+		else
+			Run GoToApplicaiton  testData.applicationName , testData.path	
+			Run toRun testData.submitType		
+		end if
+		EndTestCase testData.TestcaseName
+		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+	end if
+	
+end Repeat
+
+
+

@@ -1,0 +1,120 @@
+﻿params Type
+
+
+If Type="Context" then 
+	
+	DoubleClick  "Dekstop_Images/InputFolder", 
+	RightClick "Dekstop_Images/InputFile_JobFile_sh"
+	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3), 
+	Click "Dekstop_Images/ContextSubMenu_ToFill"
+	Set the SearchRectangle to (1620,0,1920,123)
+	WaitFor 25,  "Notifications/Nft_InputsRequired"
+	moveto "Notifications/Nft_InputsRequired"
+	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
+	set the SearchRectangle to ()
+	Log "**************************************************************************"
+	Log "Notification  - " &InputRequiredMsg
+	Log "**************************************************************************"
+	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
+	Click "Dekstop_Images/Folder_close_Red" 
+	Click "PD_ToFill_App_Page/Lable_ToFill"
+	TypeText "new"
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+Else 
+	
+	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	Click "PD_ToFill_App_Page/Lable_ToFill"
+	TypeText "new"
+	
+	If Type = "Non-Default"  then 
+		
+		Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
+		TypeText controlKey, "a"
+		TypeText "2"
+		Click "PD_PBSJobApp_Page/Lable_Memory_Bold"
+		TypeText controlKey, "a"
+		TypeText "120"
+		get Select_File.Select_Job_File
+		
+		Else if Type=DND then 
+		get Select_File.DragAndDrop_File 
+		
+		Else if Type="Default" then
+		get Select_File.Select_Job_File
+		
+		Else if Type="Profie_With_File" then
+		
+		log "Job Submission from file wala profile"
+		Else If Type="All" then 
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Job_File
+		
+		Else If Type="AllNonDef" then 			
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Job_File
+		click "PD_ToFill_App_Page/Lable_OptionalJobArg"
+		TypeText "new Arg"
+		
+		Else if Type="Req"then 
+		
+		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
+		put WaitFunction.CheckWait ("PD_ToFill_App_Page/Lable_ReqFiledsOnly") into flag
+		
+		If flag="Pass"
+			Log "Only Required Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed", "PD_ToFill_App_Page/Lable_ReqFiledsOnly"
+			Exit handler
+		end if 
+		get Select_File.Select_Job_File
+		
+		
+	End If
+	
+	
+	If imagefound ( "PD_PBSJobApp_Page/InputFile_Selected" ) or ImageFound("PD_PBSJobApp_Page/Drop_location_JobScript") then 
+		Log "File Listed" 
+	else 		
+		LogError "File not Listed"
+	End if 
+	
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+End if 
+
+
+
+
+(*
+if Type = "Context" then 
+	JobSubmission_Notification	
+	
+Else 
+	if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+		Log "Navigated to Summary Page"
+		JobSubmission_Notification
+	else 
+		LogError "Still on Profile Page"
+		CaptureScreen 
+	end if
+end if
+*)

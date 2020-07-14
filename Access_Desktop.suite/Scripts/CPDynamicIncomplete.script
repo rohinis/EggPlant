@@ -1,0 +1,75 @@
+﻿params proName , proType , proImage
+
+
+
+
+log "Pro name - "&proName
+log "pro Type - " & proType
+log "pro Image - " & proImage
+
+
+WaitFor 15, "PD_PBSJobApp_Page/DropDown_SelectServer"
+Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+Click "PD_PBSJobApp_Page/SelectServer_CR"
+
+
+if  proType =1 then //BLANK 
+	Click "PD_PBSJobApp_Page/Btn_SaveProfile"
+	Click "PD_SaveProfile/Btn_OK"
+	Log "Click Cancle"
+	Click "PD_SaveProfile/Btn_Cancel"
+	
+	LogSuccess "Error indicated for BLANK input"
+	
+else if  proType=2 then // DEFAULT
+	
+	Click "PD_PBSJobApp_Page/Btn_SaveProfile" // use Existing Image 
+	
+else if  proType = 3 // NON - DEFAULT
+	
+	Click "PD_Optistruct_App_Page/Lable_NCPU"
+	TypeText controlKey, "a"
+	TypeText "2"
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+	TypeText "new"
+	
+else if  proType is in ("4","9")	// SELECT FILES  AND INCLUDE FILES
+	
+	get Select_File.Select_Master_File
+	
+else if  proType = 5 	// MASTER FILR DND
+	
+	get Select_File.Select_Master_File_DND
+	
+end if 
+
+
+click "PD_PBSJobApp_Page/Btn_SaveProfile" 
+Click "PD_SaveProfile/TxtBox_ProfileName"
+TypeText  proName
+Click "PD_SaveProfile/Btn_OK"
+
+get WaitFunction.CheckWait ("PD_ProfilesPage/Lable_Profiles")
+
+
+Try
+	put ProfilesSort.SortType
+	
+	put  WaitFunction.CheckWait (proImage ) into flag
+	
+	If flag="Pass"
+		LogSuccess "Profile Created - " & proName
+	else 
+		LogError "Optional Fileds NOT Displayed"
+		
+	end if 
+Catch exception
+	
+	LogError "Profile not create " & exception
+	CaptureScreen (Name: proName)
+	
+End try
+
+
+
+

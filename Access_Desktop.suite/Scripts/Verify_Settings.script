@@ -1,0 +1,125 @@
+﻿
+BeginTestCase ShowJobProfiles
+run AccessSettings 1
+WaitFor 4, "PD_ProfilesPage/Lable_PBSJobApp"
+
+if imagefound(image:"PD_ProfilesPage/Lable_PBSJobApp",scale: 0.5 to 1.5 by .25) then 
+	LogSuccess "On Profiles Page"	
+end if
+Click (image:"PD_ProfilesPage/Icon_BackArrow",scale: 0.5 to 1.5 by .25)
+wait 3 
+if ImageFound(3, "PD_HomePage_Lables/Lable_Summary") then
+	Log "Navigated to Summary Page"
+end if 
+
+EndTestCase ShowJobProfiles
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+TypeText Escape
+
+BeginTestCase OpenClustersWindow
+run AccessSettings 2
+if imagefound("PD_DeleteServer/Icon_DeleteServer" ) or imagefound("AddCluster/AddCluster") then 
+	LogSuccess "Clusters Pane Open"
+end if
+
+click  "ClusterElements/Icon_Close"
+EndTestCase OpenClustersWindow
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+BeginTestCase ExportCofig
+wait 4 
+run AccessSettings 3
+click (image:"Dekstop_Images/WinExplorer_Desktop_ExportConfig",scale: 0.5 to 1.5 by .25)
+click (image:"Dekstop_Images/WinExplorer_SelectFolder",scale: 0.5 to 1.5 by .25)
+if ImageFound("Dekstop_Images/ConfigFile") then
+	LogSuccess "Config file created"	
+end if
+EndTestCase ExportCofig
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"RemoteDrive/Btn_OK"
+
+BeginTestCase ShowLogs
+run AccessSettings 4
+if imagefound("Dekstop_Images/WinExplorer_LogFolder_AddBar") then
+	LogSuccess"Log Folder Opened"
+end if
+Click (image:"Dekstop_Images/WinExplorer_LogFolder_AddBar",hotspot:(300,0))
+
+moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+WaitFor 2, "Dekstop_Images/Folder_close_Red" 
+Click "Dekstop_Images/Folder_close_Red" 
+EndTestCase ShowLogs
+
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+(*BeginTestCase ConfigureRemoteDrive
+run AccessSettings 5
+if ImageFound("RemoteDrive/TitelBar_RemoteDrive") then 
+	Click (image:"RemoteDrive/TxtBox_DriveName",scale: 0.5 to 1.5 by .25)
+	TypeText "K"
+	Click (image:"RemoteDrive/Btn_OK",scale: 0.5 to 1.5 by .25)
+	keydown windowsKey
+	typetext e
+	Click (image:"RemoteDrive/WinDowsExplr_ThisPC",scale: 0.5 to 1.5 by .25)
+	
+	if ImageFound("RemoteDrive/WinDowsExplr_RemoteDrive_w") then 
+		LogSuccess "Drive Renamed"
+	end if	
+end if
+moveto ( Image:"Dekstop_Images/WinExplorer_Ques" ,hotspot:(1,10))
+click (image:"Dekstop_Images/WinExplorer_closeBtn_002",scale: 0.5 to 1.5 by .25)
+EndTestCase ConfigureRemoteDrive*)
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"Dekstop_Images/IE_PADHelpPage"
+
+BeginTestCase AccessHelp
+run AccessSettings 6
+wait 3 
+moveto (Image:"Dekstop_Images/IE_PADHelpPage")
+click MouseLocation()
+if ImageFound("Dekstop_Images/IE_HelpContents") then
+Logsuccess "Help Page Opened "
+end if
+Click (image:"Dekstop_Images/IE_Close",scale: 0.5 to 1.5 by .25)
+
+
+
+
+EndTestCase AccessHelp
+
+
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+BeginTestCase ShowApplications
+run AccessSettings 7
+
+
+if imagefound("Dekstop_Images/WinExplorer_AppFolder_AddBar") then
+	LogSuccess"Applications Folder Opened"
+end if
+moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+WaitFor 2, "Dekstop_Images/Folder_close_Red" 
+Click "Dekstop_Images/Folder_close_Red" 
+EndTestCase ShowApplications
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+BeginTestCase Prefrences
+run AccessSettings 8
+
+
+if imagefound( "PA_PrefrencePanel/Lable_Preferences") then
+	LogSuccess"Applications Folder Opened"
+end if
+
+click  "ClusterElements/Icon_Close"
+EndTestCase Prefrences
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

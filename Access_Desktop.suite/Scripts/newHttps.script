@@ -1,0 +1,26 @@
+(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2020-01-22 13:28:50
+  From session:  newHttps
+  Captured on:  2020-01-22 13:26:16
+  From server:  Win
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+Click "ClusterElements/TypeSelector"
+Click "ClusterElements/HTTPS"
+Click "ClusterElements/txtBx_ClusterName_http"
+TypeText "CR"
+KeyUp ShiftKey
+Click "ClusterElements/txtBx_ClusterInfo_http"
+TypeText "https"
+TypeText ":"
+KeyUp ";"
+TypeText "//172.16.80.92"
+TypeText ":"
+KeyUp ";"
+TypeText "443"
+Click "ClusterElements/image0001"
+TypeText "rohini"
+Click "ClusterElements/image0002"
+TypeText "rohini"
+Click "ClusterElements/image0003"
+Click "ClusterElements/https172168092443"

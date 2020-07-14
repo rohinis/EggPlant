@@ -1,0 +1,62 @@
+﻿
+(*
+run AccessSettings 2
+Click "PD_DeleteServer/IcnDeleteCluster"
+Click "PD_DeleteServer/TitleRemoveCluster"
+
+*)
+
+params d , ServerName
+
+if d=1 then 
+	log "delete server "
+	log ServerName
+	moveto (text:ServerName)
+	Click MouseLocation()
+	
+	Click "PD_DeleteServer/IcnRemoveCluster"
+	Click "PD_DeleteServer/BtnRemoveClusterYes"
+	
+else 
+	
+	BeginTestCase DeleteCluster_Close
+	
+	Click "PD_DeleteServer/vm18_Icon_selected"
+	Click "PD_DeleteServer/IcnDeleteCluster"
+	Click "PD_DeleteServer/TitleRemoveCluster"
+	Click "PD_DeleteServer/IconRemoveClusterClose"
+	
+	--	"PD_DeleteServer/IconRemoveClusterClose"
+	if ImageFound("PD_DeleteServer/IcnDeleteCluster") then
+		LogSuccess "Cluster not deleted"
+	end if
+	
+	
+	EndTestCase DeleteCluster_Close
+	
+	BeginTestCase DeleteCluster_No
+	Click "PD_DeleteServer/vm18_Icon_selected"
+	Click "PD_DeleteServer/IcnDeleteCluster"
+	Click "PD_DeleteServer/TitleRemoveCluster"
+	Click "PD_DeleteServer/IcnRemoveCluster"
+	Click "PD_DeleteServer/BtnREmoveclusterNO"
+	if ImageFound("PD_DeleteServer/IcnDeleteCluster") then
+		LogSuccess "Cluster not deleted"
+	end if
+	
+	EndTestCase DeleteCluster_No
+	
+	BeginTestCase DeleteCluster
+	Click "PD_DeleteServer/vm18_Icon_selected"
+	Click "PD_DeleteServer/IcnDeleteCluster"
+	Click "PD_DeleteServer/TitleRemoveCluster"
+	Click "PD_DeleteServer/IcnRemoveCluster"
+	Click "PD_DeleteServer/BtnRemoveClusterYes"
+	if ImageFound("ClusterElements/txtbxClusterName") then
+		LogSuccess "Cluster Deleted and Registration form shown"
+	end if
+	
+	EndTestCase DeleteCluster
+	
+	
+end if

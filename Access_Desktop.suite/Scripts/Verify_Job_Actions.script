@@ -1,0 +1,120 @@
+﻿(*
+BeginTestCase Terminate_Job_Close
+
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+
+Click (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+
+Click (image:"PD_Terminate_Job/TitelBar_TerminateJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Terminate_Job/TitleBar_Terminate_Close_Btn", scale: 0.5 to 1.5 by .25)
+if ImageFound("PD_HomePage_Lables/Lable_RunningJob")then 
+	LogSuccess "Job NotTerminated"
+end if
+
+EndTestCase Terminate_Job_Close
+
+BeginTestCase Terminate_Job_No
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+
+Click (image:"PD_Terminate_Job/TitelBar_TerminateJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Terminate_Job/Terminate_No_Btn", scale: 0.5 to 1.5 by .25)
+if ImageFound("PD_HomePage_Lables/Lable_RunningJob")then 
+	LogSuccess "Job NotTerminated"
+end if
+EndTestCase Terminate_Job_No
+
+
+BeginTestCase Terminate_Job
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_HomePage_Lables/Lable_SubMenu_Terminate", scale: 0.5 to 1.5 by .25)
+
+Click (image:"PD_Terminate_Job/TitelBar_TerminateJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Terminate_Job/Terminate_Yes_Btn", scale: 0.5 to 1.5 by .25)
+
+waitFor  25 ,"PD_HomePage_Lables/Lable_Failed_terminate"
+
+if  ImageFound( "PD_HomePage_Lables/Lable_Failed_terminate")then 
+	LogSuccess "Job NotTerminated"
+end if
+
+EndTestCase Terminate_Job
+
+
+
+-- ========================================================================================
+
+Log "Waiting for PAD to update job List "
+wait 10 
+
+*)
+
+
+BeginTestCase Remove_Job_Close
+
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Remove", scale: 0.5 to 1.5 by .25)
+Click "PD_HomePage_Lables/Lable_SubMenu_Remove"
+
+Click (image:"PD_Remove_Job/TitleBar_RemoveJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Remove_Job/TitleBar_Remove_Close_Btn", scale: 0.5 to 1.5 by .25),
+if ImageFound("PD_HomePage_Lables/Lable_Failed_Remove") then 
+	LogSuccess "Job Not removed"
+end if	
+endTestCase Remove_Job_Close
+
+BeginTestCase Remove_Job_No
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25) 
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Remove", scale: 0.5 to 1.5 by .25)
+Click "PD_HomePage_Lables/Lable_SubMenu_Remove"
+
+Click (image:"PD_Remove_Job/TitleBar_RemoveJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Remove_Job/Remove_No_Btn", scale: 0.5 to 1.5 by .25)
+if ImageFound("PD_HomePage_Lables/Lable_Failed_Remove") then 
+	LogSuccess "Job Not removed"
+end if	
+
+EndTestCase Remove_Job_No
+
+BeginTestCase Remove_Job
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+Moveto (image:"PD_HomePage_Lables/Lable_SubMenu_Remove", scale: 0.5 to 1.5 by .25)
+Click "PD_HomePage_Lables/Lable_SubMenu_Remove"
+WaitFunction "PD_Remove_Job/TitleBar_RemoveJob"
+Log "Done Waiting"
+
+Click (image:"PD_Remove_Job/TitleBar_RemoveJob", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_Remove_Job/Remove_Yes_Btn", scale: 0.5 to 1.5 by .25)
+if not ImageFound("PD_HomePage_Lables/Lable_Failed_Remove") then 
+	LogSuccess "Job Removed Successfully"
+end if	
+EndTestCase Remove_Job
+
+-- ========================================================================================
+
+Log "Waiting for PAD to update job List "
+wait 10
+
+
+
+
+
+BeginTestCase View_Files
+
+Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
+Click (image:"PD_HomePage_Lables/Lable_SubMenu_ViewFiles", scale: 0.5 to 1.5 by .25)
+
+if ImageFound("Dekstop_Images/WinExplorer_Icons") then
+	LogSuccess "Job Dir Opened"
+	--, "PD_HomePage_Lables/Lable_SubMenu_ViewFiles"
+end if
+EndTestCase View_Files
+
+
+
+
+-- ========================================================================================

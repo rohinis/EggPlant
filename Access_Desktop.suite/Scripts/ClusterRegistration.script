@@ -1,0 +1,81 @@
+﻿params creds
+
+log "calling function now "
+
+get CR_Fill_Deatails.Fill_Cluster_Details_Sanity (creds)
+
+if creds.Flow	 is in ("0") then
+	put Notifications.Check_Notifications into CR
+	
+	
+	if creds.set="CntRepo" then
+		put Notifications_ClusterRegistration.Check_Cluster_Notifications  into CR
+	end if 
+	
+	
+	if CR.flag="Pass"
+		Log "**************************************************************************"
+		LogSuccess "Cluster Registeration Sucessfully"
+		Log "**************************************************************************"
+		click "ClusterElements/Icon_Close"
+		
+		--run AccessSettings 2
+		--log it 
+		(*Run DeleteServer 1 , creds.serverName	
+		
+		if creds.set="CntRepo" then 
+			log " Not Deleting Server"
+		else 
+			Run DeleteServer 1 , creds.serverName	
+		end if
+*)
+		
+	Else 
+		Log "**************************************************************************"
+		LogError "Cluster RegisterationFailed"
+		Log "**************************************************************************"
+		CaptureScreen (Name: "Cluster-Registeration-Failed")
+		get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+		
+	end if 
+	
+else if creds.Flow is in ("1") then
+	
+	if imagefound ( "AddCluster/Error_Image" ) then 
+		
+		put "Fail" into flag
+		
+	else if imagefound ("AddCluster/Btn_AddDone") then 
+		put Notifications.Check_Notifications into CR
+		
+	end if
+	put CR.flag into flag
+	if flag="Pass"
+		
+		Log "**************************************************************************"
+		LogError "Cluster Registeration Sucessfully  - InValid Input Test Case"
+		Log "**************************************************************************"
+		CaptureScreen (Name: "Cluster-Registeration-Successfull-Invalid-Inputs")
+	Else 
+		Log "**************************************************************************"
+		LogSuccess "Cluster Registeration Failed - Negativr Flow"
+		Log "**************************************************************************"
+	end if 
+	wait 4
+	get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+	
+else 
+	
+	Log "Invalid Input test case "
+	get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+end if 
+
+
+
+
+
+
+
+
+
+

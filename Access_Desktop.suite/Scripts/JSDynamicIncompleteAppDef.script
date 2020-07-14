@@ -1,0 +1,162 @@
+﻿params Type 
+
+If Type="Context" then 
+	DoubleClick   "Dekstop_Images/InputFolder", 
+	waitfor 2 ,"Dekstop_Images/InputFile_MasterFile.fem"
+	RightClick "Dekstop_Images/InputFile_MasterFile.fem"
+	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3)
+	Click (Image :"Dekstop_Images/ContextSubMenu_DynamicInCompleteApp", WaitFor:3)
+	
+	Set the SearchRectangle to (1620,0,1920,123)
+	WaitFor 25,  "Notifications/Nft_InputsRequired"
+	moveto "Notifications/Nft_InputsRequired"
+	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
+	set the SearchRectangle to ()
+	Log "**************************************************************************"
+	Log "Notification  - " &InputRequiredMsg
+	Log "**************************************************************************"
+	
+	Click "Dekstop_Images/InputFile_MasterFile.fem"
+	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
+	Click "Dekstop_Images/Folder_close_Red" 
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
+	TypeText "new"
+	
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+Else
+	
+	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	
+	
+	If Type = "Non-Default"  then 
+		Click "PD_Optistruct_App_Page/Lable_NCPU"
+		TypeText controlKey, "a"
+		TypeText "2"
+		
+		Click "PD_Optistruct_App_Page/Lable_Mem"
+		TypeText controlKey, "a"
+		TypeText "120"
+		
+		get Select_File.Select_Master_File 
+		
+	Else if Type=DND then 
+		get Select_File.Select_Master_File_DND
+		
+		
+	Else if Type="Default" then
+		get Select_File.Select_Master_File 
+		
+		
+	Else if Type="Profie_With_File" then	
+		
+		log "Job Submission from file wala profile"
+		
+	Else if Type="Overwrite" then 
+		get Select_File.Select_Master_File 
+		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+		Log "Master and Include files Selected - Now Over writing "
+		get Select_File.OverWrite_Master_File 
+		
+	Else if Type="Fem" then 
+		get Select_File.Select_Fem_File 	
+		
+	Else If Type="All" then 
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Master_File 
+		
+		Else If Type="AllNonDef" then 			
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
+		If flag="Pass"
+			Log "Optional Fileds Displayed"
+		Else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		End if 
+		
+		get Select_File.Select_Master_File 
+		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
+		Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		
+		Else if Type="Req"then 
+		
+		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
+		put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
+		
+		If flag="Pass"
+			Log "Only Required Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Master_File 
+		
+	End If
+	
+	if Type="Overwrite" then
+		put  WaitFunction.CheckWait ( "PD_Optistruct_App_Page/Include_OverwriteFiles") into flag
+		
+	else if Type="Fem" then 
+		
+		put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_FemFile_Selected") into flag
+	else
+		If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) or ImageFound("PD_Optistruct_App_Page/Lable_MasterFile_Selected")then 
+			Log " Master File selected "
+		End If
+		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+	end if 	
+	
+	If flag="Pass"
+		Log "Files Pupolated"
+	else 
+		LogError "Files Not Pupolated"
+		Exit handler
+	end if 
+	
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
+	TypeText "new"
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+	
+	
+End If
+
+
+
+if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+	LogSuccess "Navigated to Summary Page"
+	--	JobSubmission_Notification
+else 
+	LogError "Still on Profile Page"
+	CaptureScreen 
+end if
+
+(*
+
+if Type = "Context" then 
+	JobSubmission_Notification	
+	
+Else 
+	
+	if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+		Log "Navigated to Summary Page"
+		JobSubmission_Notification
+	else 
+		LogError "Still on Profile Page"
+		CaptureScreen 
+	end if
+end if
+
+*)

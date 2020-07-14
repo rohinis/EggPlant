@@ -1,0 +1,20 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2018-03-15 12:28:16
+  From session:  dnd
+  Captured on:  2018-03-15 12:25:30
+  From server:  TestServer
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+
+function CheckWait imageName
+	log imageName
+	repeat  45 seconds 
+		if imagefound  (imageName)
+			put Pass into Flag 
+			exit repeat
+		end if
+	end repeat	
+	return Flag
+	
+end CheckWait
+

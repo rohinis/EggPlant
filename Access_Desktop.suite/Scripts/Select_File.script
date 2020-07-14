@@ -1,0 +1,103 @@
+﻿function DragAndDrop_File 
+	DoubleClick   "Dekstop_Images/InputFolder", 
+	Click "Dekstop_Images/InputFile_JobFile_sh"
+	Drag "Dekstop_Images/InputFile_JobFile_001"
+	Drop "PD_PBSJobApp_Page/Drop_location"
+	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+	Click "Dekstop_Images/Folder_close_Red" 
+	return "File Dropped"
+end DragAndDrop_File
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+
+function Select_Job_File
+
+	--Click (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
+	moveto (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
+	Click (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	DoubleClick "PD_PBSJobApp_Page/InputFile_JobFilesh"
+	
+	return "File Selected "
+end Select_Job_File
+
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function Select_Fem_File  
+	--Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(206,7))
+	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	DoubleClick  "Dekstop_Images/InputFile_box"
+	return "MasterFile  Selected "
+end Select_Fem_File
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function Select_Master_File  
+	//Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	DoubleClick  "PD_Optistruct_App_Page/IncludeFile_Master"
+	return "MasterFile  Selected "
+end Select_Master_File
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function OverWrite_Master_File  
+	--Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))  
+	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	DoubleClick  "Dekstop_Images/InputFile_OverwriteMaster"
+	return "MasterFile  Overwritten"
+end OverWrite_Master_File
+
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function Select_Master_File_DND
+
+	DoubleClick   "Dekstop_Images/InputFolder"
+	Click "Dekstop_Images/InputFile_MasterFile.fem", 
+	Drag "Dekstop_Images/InputFile_MasterFile_Selected.fem"
+	Drop "PD_Optistruct_App_Page/DropLocation_InputFile"
+	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
+	--	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
+	Click "Dekstop_Images/Folder_close_Red" 
+	return 
+end Select_Master_File_DND
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function Select_Starter_File  
+	Click "PD_Radioss/Icon_SelectFile"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	DoubleClick "PD_Radioss/WinExp_StarterFile"
+	return "Starter File  Selected "
+end Select_Starter_File
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+function Select_StarterFile_DND
+	DoubleClick   "Dekstop_Images/InputFolder"
+	Click "Dekstop_Images/InputFile_StarterFile"
+	Drag "Dekstop_Images/InputFile_StarterFile_Selected"
+	Drop "PD_Radioss/DropLocation"
+	Click "Dekstop_Images/InputFile_MasterFile.fem", 
+	Click "Dekstop_Images/Folder_close"
+	return 
+end Select_StarterFile_DND
+
+(*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+

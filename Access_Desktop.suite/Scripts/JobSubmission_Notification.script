@@ -1,0 +1,13 @@
+﻿put Notifications.Check_Notifications into JS
+if JS.Flag="Pass"
+	Log "**************************************************************************"
+	LogSuccess "Job Submission done Sucessfully - JobID  - " &JS.JobID
+	Log "**************************************************************************"
+Else 
+	
+	Log "**************************************************************************"
+	LogError "Job Submission Failed - ErrMsg -" &JS.JobID
+	Log "**************************************************************************"
+	CaptureScreen (Name: "Job-Submission -Failed")
+	
+end if 

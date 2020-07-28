@@ -1,11 +1,14 @@
 ﻿function DragAndDrop_File 
-	DoubleClick   "Dekstop_Images/InputFolder", 
+	-- DoubleClick  "Dekstop_Images/InputFolder", 
+	DoubleClick (text:"InputDeck")
 	Click "Dekstop_Images/InputFile_JobFile_sh"
 	Drag "Dekstop_Images/InputFile_JobFile_001"
 	Drop "PD_PBSJobApp_Page/Drop_location"
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	Click "Dekstop_Images/Folder_close_Red" 
 	return "File Dropped"
+	(*Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+	TypeText "new"*)
 end DragAndDrop_File
 
 (*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
@@ -19,7 +22,6 @@ function Select_Job_File
 	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
 	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
 	DoubleClick "PD_PBSJobApp_Page/InputFile_JobFilesh"
-	
 	return "File Selected "
 end Select_Job_File
 
@@ -44,7 +46,7 @@ function Select_Master_File
 	//Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
 	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
 	DoubleClick  "PD_Optistruct_App_Page/IncludeFile_Master"
 	return "MasterFile  Selected "
@@ -67,7 +69,8 @@ end OverWrite_Master_File
 
 function Select_Master_File_DND
 
-	DoubleClick   "Dekstop_Images/InputFolder"
+	-- DoubleClick   "Dekstop_Images/InputFolder"
+	DoubleClick (text:"InputDeck")
 	Click "Dekstop_Images/InputFile_MasterFile.fem", 
 	Drag "Dekstop_Images/InputFile_MasterFile_Selected.fem"
 	Drop "PD_Optistruct_App_Page/DropLocation_InputFile"
@@ -90,7 +93,8 @@ end Select_Starter_File
 (*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
 
 function Select_StarterFile_DND
-	DoubleClick   "Dekstop_Images/InputFolder"
+	-- DoubleClick   "Dekstop_Images/InputFolder"
+	DoubleClick (text:"InputDeck")
 	Click "Dekstop_Images/InputFile_StarterFile"
 	Drag "Dekstop_Images/InputFile_StarterFile_Selected"
 	Drop "PD_Radioss/DropLocation"

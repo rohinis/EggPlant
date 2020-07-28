@@ -1,5 +1,7 @@
 ﻿
 params Type
+-- put "Non-Default" into TYpe
+--put "DND" into Type
 
 if Type="Context" then 
 	DoubleClick (Image:"Dekstop_Images/InputFolder")
@@ -14,8 +16,8 @@ if Type="Context" then
 	
 Else 
 	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
---	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
---	moveto (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
+	--	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
+	--	moveto (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
 	--Click (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
 	--Click "PD_PBSJobApp_Page/SelectServer_CR"
 	
@@ -91,6 +93,17 @@ Else
 		
 	End if 
 	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Log "Image Found for completed"
+	catch anException 
+		Log "Completed Image not found"
+	end try
+	
+	Set the SearchRectangle to empty
+	
 End if 
 
 

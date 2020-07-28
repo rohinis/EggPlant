@@ -1,0 +1,10 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2020-07-23 22:08:36
+  From session:  untitled session
+  Captured on:  2020-07-23 22:07:21
+  From server:  107520116
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+DoubleClick "Dekstop_Images/InputFolder"
+DoubleClick text:"InputDeck"
+Click "Dekstop_Images/image0002"

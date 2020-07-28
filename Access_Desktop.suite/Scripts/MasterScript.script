@@ -4,7 +4,7 @@
 
 (*put "../Eggplant_Testcases/TestData/TestData.xlsx" into TestDataFile*)
 
-put ResourcePath ("inputdata.xlsx") into TestDataFile
+put ResourcePath ("testdata.xlsx") into TestDataFile
 
 --Run "01Master_CR" ,TestDataFile ,"CR"
 Run "02Master_JS" ,TestDataFile , "JS"

@@ -6,7 +6,7 @@ WaitFor 4, "PD_ProfilesPage/Lable_PBSJobApp"
 if imagefound(image:"PD_ProfilesPage/Lable_PBSJobApp",scale: 0.5 to 1.5 by .25) then 
 	LogSuccess "On Profiles Page"	
 end if
-Click (image:"PD_ProfilesPage/Icon_BackArrow",scale: 0.5 to 1.5 by .25)
+Click (image:"PD_ProfilesPage/Icn_BackArrow")
 wait 3 
 if ImageFound(3, "PD_HomePage_Lables/Lable_Summary") then
 	Log "Navigated to Summary Page"
@@ -79,7 +79,7 @@ wait 3
 moveto (Image:"Dekstop_Images/IE_PADHelpPage")
 click MouseLocation()
 if ImageFound("Dekstop_Images/IE_HelpContents") then
-Logsuccess "Help Page Opened "
+	Logsuccess "Help Page Opened "
 end if
 Click (image:"Dekstop_Images/IE_Close",scale: 0.5 to 1.5 by .25)
 

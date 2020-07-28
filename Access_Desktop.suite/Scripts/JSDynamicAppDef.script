@@ -1,4 +1,6 @@
 ﻿params Type 
+ -- put "Default" into Type
+-- put "Overwrite" into Type
 
 If Type="Context" then 
 	DoubleClick   "Dekstop_Images/InputFolder", 
@@ -118,21 +120,28 @@ Else
 End If
 
 
-if Type = "Context" then 
-	
+If Type = "Context" then 
 	logSuccess "Job Submitted"
 	--JobSubmission_Notification	
 	
 Else 
-	
-	
 	
 	if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
 		LogSuccess "Navigated to Summary Page"
 		--	JobSubmission_Notification
 	else 
 		LogError "Still on Profile Page"
-		CaptureScreen 
+		CaptureScreen (904,209,1022,279)
 	end if
+	
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Log "Image Found for completed"
+	catch anException 
+		Log "Completed Image not found"
+	end try
+	
+	Set the SearchRectangle to empty
 end if
 

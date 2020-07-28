@@ -7,7 +7,10 @@ put the number of items in DataSet into totalItems
 
 repeat totalItems times
 	
+	
 	set testData to item repeatIndex() of DataSet
+	Log repeatIndex()
+	Log testData
 	
 	if testData.toRun="Yes" then 
 		Log "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"

@@ -19,39 +19,33 @@ else if setting =2 then
 	
 	--Set the SearchRectangle to (1620,0,1920,123)
 	Log  "OpenCluster"
-	Click "PD_HomePage_Lables/Lable_Cluster"
+	Click (Text:"Clusters")
 	--Set the SearchRectangle to ()
 	
 else if setting = 3
 	Log "Export Config"
-	
-	Click (image: "PD_HomePage_Lables/Lable_ExportConfig",scale: 0.5 to 1.5 by .25)
+	Click (Text: "Export Config")
 	
 else if setting= 4
 	log "Show logs"
-	Click (image:"PD_HomePage_Lables/Lable_ShowLogs" ,scale: 0.5 to 1.5 by .25)
+	Click (Text:"Show Logs")
 else if setting = 5 
 	log "Remote Drive"
 	Click (image: "PD_HomePage_Lables/Lable_RemoteDrive",scale: 0.5 to 1.5 by .25)
 	
 else if setting =6 
 	Log "Help"
-	Click (image:"PD_HomePage_Lables/Lable_Help",scale: 0.5 to 1.5 by .25), 
+	Click (Text: "Help") 
 	
 else if setting =7
 	Log "Show Applications"
-	Click "PD_HomePage_Lables/Lable_ShowApplications"	
+	Click (Text: "Show Applications")
 	
 else if setting =8
 	
 	Log "Prefrences"
-	Click "PD_HomePage_Lables/Lable_Prefrences"
-	
-	
+	Click (Text: "Preferences")
 else
-	
-	
-	
 	Log "Exit"
 	Click (image:"PD_HomePage_Lables/Lable_Exit",scale: 0.5 to 1.5 by .25)
 end if 

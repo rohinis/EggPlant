@@ -1,6 +1,6 @@
-﻿params Type 
- -- put "Default" into Type
--- put "Overwrite" into Type
+﻿-- params Type 
+-- put "Default" into Type
+put "Overwrite" into Type
 
 If Type="Context" then 
 	DoubleClick   "Dekstop_Images/InputFolder", 

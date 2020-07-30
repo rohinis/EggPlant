@@ -14,37 +14,42 @@ end if
 
 EndTestCase ShowJobProfiles
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-TypeText Escape
 
 BeginTestCase OpenClustersWindow
 run AccessSettings 2
-if imagefound("PD_DeleteServer/Icon_DeleteServer" ) or imagefound("AddCluster/AddCluster") then 
+If imagefound("Dekstop_Images/AddCluster") then 
 	LogSuccess "Clusters Pane Open"
 end if
-
 click  "ClusterElements/Icon_Close"
 EndTestCase OpenClustersWindow
 
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 BeginTestCase ExportCofig
-wait 4 
+wait 2
 run AccessSettings 3
+Click (Text: "Desktop")
+Click ("Dekstop_Images/WinExplorer_SelectFolder")
+(*
 click (image:"Dekstop_Images/WinExplorer_Desktop_ExportConfig",scale: 0.5 to 1.5 by .25)
 click (image:"Dekstop_Images/WinExplorer_SelectFolder",scale: 0.5 to 1.5 by .25)
-if ImageFound("Dekstop_Images/ConfigFile") then
+*)
+if imageFound(Text:"AltairAccessConfig") then
 	LogSuccess "Config file created"	
 end if
 EndTestCase ExportCofig
 
+
+
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"RemoteDrive/Btn_OK"
 
 BeginTestCase ShowLogs
+
 run AccessSettings 4
-if imagefound("Dekstop_Images/WinExplorer_LogFolder_AddBar") then
-	LogSuccess"Log Folder Opened"
+if imagefound("Dekstop_Images/Showlogs_adf_image") then
+	LogSuccess "Log Folder Opened"
 end if
-Click (image:"Dekstop_Images/WinExplorer_LogFolder_AddBar",hotspot:(300,0))
+(*Click (image:"Dekstop_Images/WinExplorer_LogFolder_AddBar",hotspot:(300,0))*)
 
 moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 WaitFor 2, "Dekstop_Images/Folder_close_Red" 
@@ -76,17 +81,22 @@ EndTestCase ConfigureRemoteDrive*)
 BeginTestCase AccessHelp
 run AccessSettings 6
 wait 3 
-moveto (Image:"Dekstop_Images/IE_PADHelpPage")
-click MouseLocation()
+
+if ImageFound("Dekstop_Images/Help_page_AltairPBSWorks") 
+then 
+	LogSuccess "Help page opened"
+end if
+Click ("Dekstop_Images/Help_page_closebutton")
+EndTestCase AccessHelp
+
+(*
+Click (image:"Dekstop_Images/IE_Close",scale: 0.5 to 1.5 by .25)
 if ImageFound("Dekstop_Images/IE_HelpContents") then
 	Logsuccess "Help Page Opened "
 end if
 Click (image:"Dekstop_Images/IE_Close",scale: 0.5 to 1.5 by .25)
-
-
-
-
 EndTestCase AccessHelp
+*)
 
 
 

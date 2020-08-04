@@ -1,20 +1,22 @@
 ﻿BeginTestCase Detele_Profile
 --put ((ProfileName:"NewProDA"),(ProfileName:"DAWith Space"),(ProfileName:"DAWithFile"),(ProfileName:"DASP"),) into profilelist
 --put ((ProfileName:"DAWithFile")) into profilelist
---put ((*(ProfileName:"NewProDAI"),(ProfileName:"ProDAI123"),(ProfileName:"DAIWith Space"),*)(ProfileName:"ForTestingSpecial_Char"),(ProfileName:"DAIWithFile")) into profilelist
+--put ((*(ProfileName:"NewProDAI"),(ProfileName:"ProDAI123"),(ProfileName:"DAIWith Space"),*)(ProfileName:"ForTestingSpecial_Char"),(ProfileName:"DAIWithFile")) into profilelist"PD_Created_Profiles/NewProfile_Image"
 
 run AccessSettings 1
 
-moveto ( image:"PD_Created_Profiles/Lable_NewPro" , hotspot:(275,7))
-click ( image:"PD_Created_Profiles/Lable_NewPro" , hotspot:(275,7))
+(*moveto ( Text:"PD_Created_Profiles/Lable_NewPro" , hotspot:(275,7))
+click ( image:"PD_Created_Profiles/Lable_NewPro" , hotspot:(275,7))*)
+
+Click "PD_Created_Profiles/NewProfile_Image"
+Click "PD_Created_Profiles/Ellipsis_button"
+Click "PD_HomePage_Lables/Lable_SubMenu_Remove"
 
 Moveto"PD_HomePage_Lables/Lable_SubMenu_Remove"
 Click "PD_HomePage_Lables/Lable_SubMenu_Remove"
 
 Click "PD_DeleteProfile/Delete_Icon"
 Click "PD_DeleteProfile/RemoveProfile_Yes_Btn"
-
-
 
 EndTestCase Detele_Profile
 

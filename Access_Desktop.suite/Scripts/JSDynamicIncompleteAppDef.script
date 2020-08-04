@@ -75,7 +75,7 @@ Else
 		end if 
 		get Select_File.Select_Master_File 
 		
-		Else If Type="AllNonDef" then 			
+	Else If Type="AllNonDef" then 			
 		
 		Click "PD_PBSJobApp_Page/Lable_AllFileds"
 		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
@@ -128,11 +128,8 @@ Else
 	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
 	TypeText "new"
 	Click "PD_PBSJobApp_Page/Btn_Submit"
-	
-	
-	
-End If
 
+End If
 
 
 if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then

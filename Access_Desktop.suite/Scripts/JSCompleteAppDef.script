@@ -1,21 +1,24 @@
 ﻿
 params Type
 -- put "Non-Default" into TYpe
---put "DND" into Type
+--put "Profie_With_File" into Type
+
 
 if Type="Context" then 
 	DoubleClick (Image:"Dekstop_Images/InputFolder")
 	RightClick (Image:"Dekstop_Images/InputFile_JobFile_sh")
 	// "Dekstop_Images/InputFolder"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with")
-	Click(Image:"Dekstop_Images/ContextSubMenu_PBSJobApp")
+	Click(Text:"ShellScript")
 	Click  (Image:"Dekstop_Images/InputFile_JobFile_sh")
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	--	WaitFor 2, "Dekstop_Images/Folder_close_Red" , "Dekstop_Images/Folder_close_Red"
 	Click "Dekstop_Images/Folder_close_Red" 
 	
-Else 
+	Else 
+	(*
 	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
+	*)
 	--	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
 	--	moveto (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
 	--Click (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
@@ -39,7 +42,9 @@ Else
 		get Select_File.Select_Job_File
 		
 	Else if Type="Profie_With_File" then
-		log "Job Submission from file wala profile"
+		Log "New - Profile With File"
+		DoubleClick "PD_Created_Profiles/WithFile_image"
+		get Select_File.Select_Job_File
 		
 	Else If Type="All" then 
 		--Click "PD_PBSJobApp_Page/Lable_ReqFileds" ,"PD_PBSJobApp_Page/Lables_OptionalFileds"
@@ -60,7 +65,7 @@ Else
 		
 		Click "PD_PBSJobApp_Page/Lable_AllFileds"
 		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lables_OptionalFileds") into flag
-		If flag="Pass"
+If flag="Pass"
 			Log "Optional Fileds Displayed"
 		else 
 			LogError "Optional Fileds NOT Displayed"

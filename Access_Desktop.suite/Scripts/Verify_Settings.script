@@ -59,7 +59,7 @@ EndTestCase ShowLogs
 
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-(*BeginTestCase ConfigureRemoteDrive
+BeginTestCase ConfigureRemoteDrive
 run AccessSettings 5
 if ImageFound("RemoteDrive/TitelBar_RemoteDrive") then 
 	Click (image:"RemoteDrive/TxtBox_DriveName",scale: 0.5 to 1.5 by .25)
@@ -75,7 +75,7 @@ if ImageFound("RemoteDrive/TitelBar_RemoteDrive") then
 end if
 moveto ( Image:"Dekstop_Images/WinExplorer_Ques" ,hotspot:(1,10))
 click (image:"Dekstop_Images/WinExplorer_closeBtn_002",scale: 0.5 to 1.5 by .25)
-EndTestCase ConfigureRemoteDrive*)
+EndTestCase ConfigureRemoteDrive
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"Dekstop_Images/IE_PADHelpPage"
 
 BeginTestCase AccessHelp

@@ -1,4 +1,4 @@
-﻿(*
+﻿
 BeginTestCase Terminate_Job_Close
 
 Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)
@@ -44,16 +44,12 @@ end if
 
 EndTestCase Terminate_Job
 
-
-
--- ========================================================================================
+========================================================================================
 
 Log "Waiting for PAD to update job List "
 wait 10 
 
-*)
-
-
+------------We can add in another script --
 BeginTestCase Remove_Job_Close
 
 Click (image:"PD_HomePage_Lables/Lable_SubmittedOn", scale: 0.5 to 1.5 by .25)

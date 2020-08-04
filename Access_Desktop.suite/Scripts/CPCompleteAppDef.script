@@ -1,8 +1,5 @@
 ﻿params proName , proType , proImage
 
-
-
-
 log "Pro name - "&proName
 log "pro Type - " & proType
 log "pro Image - " & proImage

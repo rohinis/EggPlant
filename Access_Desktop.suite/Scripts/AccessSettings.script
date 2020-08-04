@@ -29,9 +29,10 @@ else if setting = 3
 else if setting= 4
 	log "Show logs"
 	Click (Text:"Show Logs")
+	
 else if setting = 5 
 	log "Remote Drive"
-	Click (image: "PD_HomePage_Lables/Lable_RemoteDrive",scale: 0.5 to 1.5 by .25)
+	Click (Text: "Configure Remote Drive")
 	
 else if setting =6 
 	Log "Help"

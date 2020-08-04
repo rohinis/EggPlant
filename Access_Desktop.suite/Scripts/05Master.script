@@ -1,4 +1,5 @@
-﻿
+﻿-----------This file is no more in use we can move to different folder----
+
 set myExcelDB to table ("CR") of (type:"excel", file:"D:\EggPlant\TestSanity.xlsx")
 put the records of myExcelDB into DataSet
 put the number of items in DataSet into totalItems

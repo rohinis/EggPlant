@@ -4,11 +4,12 @@
 
 (*put "../Eggplant_Testcases/TestData/TestData.xlsx" into TestDataFile*)
 
-put ResourcePath ("testdata.xlsx") into TestDataFile
+put ResourcePath ("sanity_testdata.xlsx") into TestDataFile
+-- put ResourcePath("Regression_testdata.xlsx") into TestDataFile
 
 --Run "01Master_CR" ,TestDataFile ,"CR"
-Run "02Master_JS" ,TestDataFile , "JS"
---Run "03Master_CP" ,TestDataFile, "CP"
---Run "02Master_JS" ,TestDataFile , "JSP"
+-- Run "02Master_JS" ,TestDataFile , "JS"
+-- Run "03Master_CP" ,TestDataFile, "CP"
+Run "02Master_JS" ,TestDataFile , "JSP"
 
 // "PD_Optistruct_App_Page/Lable_OptionalFiled", "PD_Optistruct_App_Page/Lable_ReqFiledsOnly", "PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly", "PD_PBSJobApp_Page/Drop_location", "PD_Created_Profiles/Lable_DAWithFile", "PD_Created_Profiles/Lable_DAWithFile_Selected", "PD_Created_Profiles/Lable_NewProDA", "PD_Created_Profiles/Lable_NewProDA_Selected", "PD_Created_Profiles/Lable_DAWithFile", "PD_Created_Profiles/Lable_DAWithFile_Selected"

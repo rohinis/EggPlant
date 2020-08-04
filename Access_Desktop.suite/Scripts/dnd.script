@@ -1,9 +1,12 @@
-(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   Script generated:  2019-06-04 14:23:03
   From session:  dnd
   Captured on:  2019-06-04 14:20:26
   From server:  TestServer
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+----------Need to to check once and move to different folder-----
+
+
 
 KeyDown ControlKey
 KeyUp ControlKey

@@ -40,10 +40,10 @@ Else
 		TypeText "120"
 		get Select_File.Select_Job_File
 		
-		Else if Type=DND then 
+	Else if Type=DND then 
 		get Select_File.DragAndDrop_File 
 		
-		Else if Type="Default" then
+	Else if Type="Default" then
 		get Select_File.Select_Job_File
 		
 		Else if Type="Profie_With_File" then
@@ -94,13 +94,23 @@ Else
 	
 	If imagefound ( "PD_PBSJobApp_Page/InputFile_Selected" ) or ImageFound("PD_PBSJobApp_Page/Drop_location_JobScript") then 
 		Log "File Listed" 
-	else 		
+	else 
 		LogError "File not Listed"
+		
 	End if 
-	
 	Click "PD_PBSJobApp_Page/Btn_Submit"
+	
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Log "Image Found for completed"
+	catch anException 
+		Log "Completed Image not found"
+	end try
+	
+	Set the SearchRectangle to empty
+	
 End if 
-
 
 
 

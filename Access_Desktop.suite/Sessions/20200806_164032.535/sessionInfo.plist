@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[232.5625, 375.024038, 294.5625, 389.024038], elementName:"Masterfem", eventNum:2, folderPath:"", hotSpot:[242.5625, 384.975962], imageName:"Masterfem", itemEvent:"TurboListItemEvent_Drag", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[377, 337, 488, 463], elementName:"image0002", eventNum:2, folderPath:"", hotSpot:[430.206731, 408.091346], imageName:"image0002", itemEvent:"TurboListItemEvent_Drop", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

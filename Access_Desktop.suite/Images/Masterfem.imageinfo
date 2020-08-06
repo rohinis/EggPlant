@@ -1,21 +1,19 @@
 ﻿{
-    CaptureDate = "2020-08-06 11:24:02 +0000";
+    CaptureDate = "2020-08-06 11:11:10 +0000";
     CaptureHost = "10.75.20.116";
     CaptureScreenSize =     (
         1024,
         768
     );
     HasAlpha = 1;
-    HotSpotX = 60;
-    HotSpotY = 30;
+    HotSpotX = 10;
+    HotSpotY = 6;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
-    OriginalLocationX = 393;
-    OriginalLocationY = 363;
+    OriginalLocationX = 232;
+    OriginalLocationY = 379;
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
     SearchAlgorithm = TextSmoothSquare;
-    tags =     (
-    );
 }

@@ -3,6 +3,10 @@
     Schedules =     (
     );
     ScriptMetaData =     {
+        JSIncompleteAppDef =         {
+            TableScriptUserActionDefaultArguments = "";
+            TableScriptUserActionType = "Not a Table Action";
+        };
     };
     SuiteEncodedTextKey = "{GkcJa)LBfz`wn?m";
     helpedSuitesInfo =     (

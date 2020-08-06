@@ -5,9 +5,10 @@ If Type="Context" then
 	waitfor 2 ,"Dekstop_Images/InputFile_MasterFile.fem"
 	RightClick "Dekstop_Images/InputFile_MasterFile.fem"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3)
-	Click (Image :"Dekstop_Images/ContextSubMenu_DynamicInCompleteApp", WaitFor:3)
+	Click (Text :"DynamicInComplete", WaitFor:3)
 	
-	Set the SearchRectangle to (1620,0,1920,123)
+	(*Set the SearchRectangle to (1620,0,1920,123)*)
+	Set the SearchRectangle to (740,9,1022,104)
 	WaitFor 25,  "Notifications/Nft_InputsRequired"
 	moveto "Notifications/Nft_InputsRequired"
 	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
@@ -21,11 +22,19 @@ If Type="Context" then
 	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
 	Click "Dekstop_Images/Folder_close_Red" 
 	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
-	TypeText "new"
-	
+	TypeText "new"	
 	Click "PD_PBSJobApp_Page/Btn_Submit"
-Else
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Logsuccess "Image Found for completed"
+	catch anException 
+		Logerror "Completed Image not found"
+	end try
 	
+	Set the SearchRectangle to empty
+	
+Else
 	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
 	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
 	Click "PD_PBSJobApp_Page/SelectServer_CR"
@@ -65,7 +74,7 @@ Else
 		
 	Else If Type="All" then 
 		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text: "All Fields")
 		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -84,50 +93,59 @@ Else
 		Else 
 			LogError "Optional Fileds NOT Displayed"
 			Exit handler
-		End if 
-		
-		get Select_File.Select_Master_File 
-		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
-		Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
-		
-		Else if Type="Req"then 
-		
-		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
-		put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
-		
-		If flag="Pass"
-			Log "Only Required Fileds Displayed"
-		else 
-			LogError "Optional Fileds NOT Displayed"
-			Exit handler
-		end if 
-		get Select_File.Select_Master_File 
-		
-	End If
+	End if 
 	
-	if Type="Overwrite" then
-		put  WaitFunction.CheckWait ( "PD_Optistruct_App_Page/Include_OverwriteFiles") into flag
-		
-	else if Type="Fem" then 
-		
-		put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_FemFile_Selected") into flag
-	else
-		If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) or ImageFound("PD_Optistruct_App_Page/Lable_MasterFile_Selected")then 
-			Log " Master File selected "
-		End If
-		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
-	end if 	
+	get Select_File.Select_Master_File 
+	Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
+	Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+	
+	Else if Type="Req"then 
+	
+	Click "PD_PBSJobApp_Page/Lable_ReqFileds"
+	put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
 	
 	If flag="Pass"
-		Log "Files Pupolated"
+		Log "Only Required Fileds Displayed"
 	else 
-		LogError "Files Not Pupolated"
+		LogError "Optional Fileds NOT Displayed"
 		Exit handler
 	end if 
+	get Select_File.Select_Master_File 
 	
-	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
-	TypeText "new"
-	Click "PD_PBSJobApp_Page/Btn_Submit"
+End If
+
+if Type="Overwrite" then
+	put  WaitFunction.CheckWait ( "PD_Optistruct_App_Page/Include_OverwriteFiles") into flag
+	
+else if Type="Fem" then 
+	
+	put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_FemFile_Selected") into flag
+else
+	If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) or ImageFound("PD_Optistruct_App_Page/Lable_MasterFile_Selected")then 
+		Log " Master File selected "
+	End If
+	put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+end if 	
+
+If flag="Pass"
+	Log "Files Pupolated"
+else 
+	LogError "Files Not Pupolated"
+	Exit handler
+end if 
+
+Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
+TypeText "new"
+Click "PD_PBSJobApp_Page/Btn_Submit"
+try 
+	Set the SearchRectangle to ("Completed_A","Completed_B")
+	WaitFor 50, (Text: "Completed")
+	Logsuccess "Image Found for completed"
+catch anException 
+	Logerror "Completed Image not found"
+end try
+
+Set the SearchRectangle to empty
 
 End If
 

@@ -1,4 +1,4 @@
-﻿ params Type 
+﻿params Type 
 -- put "Default" into Type
 -- put "Overwrite" into Type
 
@@ -12,6 +12,15 @@ If Type="Context" then
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	--WaitFor 2, "Dekstop_Images/Folder_close_Red" 
 	Click "Dekstop_Images/Folder_close_Red" 
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Logsuccess "Image Found for completed"
+	catch anException 
+		Logerror "Completed Image not found"
+	end try
+	
+	Set the SearchRectangle to empty	
 Else
 	
 	WaitFor 15, "PD_PBSJobApp_Page/DropDown_SelectServer", 
@@ -65,7 +74,7 @@ Else
 		
 	Else If Type="AllNonDef" then 			
 		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"

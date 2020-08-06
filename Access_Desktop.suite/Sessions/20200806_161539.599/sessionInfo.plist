@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[349.908654, 291.365385, 523.908654, 316.365385], elementName:"image0002", eventNum:2, folderPath:"", hotSpot:[374.908654, 457.634615], imageName:"image0002", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:True, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:"UNKNOWN", eventNum:4, folderPath:"", imageName:"", itemEvent:"TurboListItemEvent_TypeText", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_TypeText", screenShotFile:"Screen0004.png", skipStep:False, text:@"\"new\"", userModified:False, usingTempImageName:True, waitForTime:-1}, {captureRect:[0, 0, 0, 0], elementName:"UNKNOWN", eventNum:9, folderPath:"", imageName:"", itemEvent:"TurboListItemEvent_TypeText", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_TypeText", screenShotFile:"Screen0004.png", skipStep:False, text:@"\" Arg\"", userModified:False, usingTempImageName:True, waitForTime:-1}, {captureRect:[347.091346, 318.875, 473.091346, 335.875], elementName:"JobScriptArguments", eventNum:20, folderPath:"", hotSpot:[365.091346, 439.125], imageName:"JobScriptArguments", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_Image", OCRText:"Job Script Arguments", screenShotFile:"Screen0020.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:True, waitForTime:-1}, {captureRect:[308.620192, 328.120192, 378.620192, 358.120192], elementName:"image0003", eventNum:22, folderPath:"", hotSpot:[343.620192, 424.879808], imageName:"image0003", itemEvent:"TurboListItemEvent_Drag", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_Image", screenShotFile:"Screen0022.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:True, waitForTime:-1}, {captureRect:[441.625, 312.028846, 511.625, 342.028846], elementName:"image0004", eventNum:22, folderPath:"", hotSpot:[476.625, 440.971154], imageName:"image0004", itemEvent:"TurboListItemEvent_Drop", itemMode:"TurboListItemMode_New", itemType:"TurboListItemType_Image", screenShotFile:"Screen0022.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:True, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[232.134615, 375.288462, 294.134615, 389.288462], elementName:"Masterfem_0001", eventNum:2, folderPath:"", hotSpot:[238.134615, 384.711538], imageName:"Masterfem_0001", itemEvent:"TurboListItemEvent_Drag", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[394, 332, 583, 463], elementName:"image0003", eventNum:2, folderPath:"", hotSpot:[514.5, 403.432692], imageName:"image0003", itemEvent:"TurboListItemEvent_Drop", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[462, 63, 535, 85], elementName:"image0004", eventNum:4, folderPath:"", hotSpot:[492.932692, 685.173077], imageName:"image0004", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0004.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

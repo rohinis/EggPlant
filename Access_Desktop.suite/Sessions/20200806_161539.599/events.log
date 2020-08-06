@@ -1,0 +1,24 @@
+1	0.00280499	start	
+2	4.25836	mouseDown	{button:1, clickCount:1, hotSpot:[374.908654, 457.634615]}
+3	4.42556	mouseUp	{button:1, clickCount:0, hotSpot:[374.908654, 457.923077]}
+4	7.71021	keyDown	{modifiers:256, string:"n", theKey:"n"}
+5	7.81079	keyUp	{modifiers:256, string:"n", theKey:"n"}
+6	7.88112	keyDown	{modifiers:256, string:"e", theKey:"e"}
+7	7.9387	keyUp	{modifiers:256, string:"e", theKey:"e"}
+8	8.04825	keyDown	{modifiers:256, string:"w", theKey:"w"}
+9	8.11231	keyUp	{modifiers:256, string:"w", theKey:"w"}
+10	10.1692	keyDown	{modifiers:256, string:" ", theKey:" "}
+11	10.266	keyUp	{modifiers:256, string:" ", theKey:" "}
+12	10.363	flagsChanged	131330
+13	10.5728	keyDown	{modifiers:131330, string:"A", theKey:"a"}
+14	10.6043	flagsChanged	256
+15	10.7266	keyUp	{modifiers:256, string:"a", theKey:"a"}
+16	10.8701	keyDown	{modifiers:256, string:"r", theKey:"r"}
+17	10.923	keyUp	{modifiers:256, string:"r", theKey:"r"}
+18	11.1001	keyDown	{modifiers:256, string:"g", theKey:"g"}
+19	11.1877	keyUp	{modifiers:256, string:"g", theKey:"g"}
+20	15.1038	mouseDown	{button:1, clickCount:1, hotSpot:[365.091346, 439.125]}
+21	15.2552	mouseUp	{button:1, clickCount:0, hotSpot:[365.091346, 438.826923]}
+22	16.5776	mouseDown	{button:1, clickCount:1, hotSpot:[343.620192, 424.879808]}
+23	18.1959	mouseUp	{button:1, clickCount:0, hotSpot:[476.625, 440.971154]}
+24	21.1339	end	

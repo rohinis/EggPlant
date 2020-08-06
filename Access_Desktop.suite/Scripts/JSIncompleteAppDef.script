@@ -6,8 +6,8 @@ If Type="Context" then
 	DoubleClick  "Dekstop_Images/InputFolder", 
 	RightClick "Dekstop_Images/InputFile_JobFile_sh"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3), 
-	Click "Dekstop_Images/ContextSubMenu_ToFill"
-	Set the SearchRectangle to (1620,0,1920,123)
+	Click (Text:"ToFill")
+	Set the SearchRectangle to (740,9,1022,104)
 	WaitFor 25,  "Notifications/Nft_InputsRequired"
 	moveto "Notifications/Nft_InputsRequired"
 	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
@@ -18,7 +18,7 @@ If Type="Context" then
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
 	Click "Dekstop_Images/Folder_close_Red" 
-	Click "PD_ToFill_App_Page/Lable_ToFill"
+	Click (Text:"All Fields")
 	TypeText "new"
 	Click "PD_PBSJobApp_Page/Btn_Submit"
 	
@@ -34,24 +34,24 @@ Else
 		
 		Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
 		TypeText controlKey, "a"
-		TypeText "2"
+		
+		TypeText "12321"
 		Click "PD_PBSJobApp_Page/Lable_Memory_Bold"
 		TypeText controlKey, "a"
 		TypeText "120"
 		get Select_File.Select_Job_File
 		
-	Else if Type=DND then 
+		Else if Type=DND then 
 		get Select_File.DragAndDrop_File 
 		
-	Else if Type="Default" then
+		Else if Type="Default" then
 		get Select_File.Select_Job_File
 		
 		Else if Type="Profie_With_File" then
 		
 		log "Job Submission from file wala profile"
 		Else If Type="All" then 
-		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -63,7 +63,7 @@ Else
 		
 		Else If Type="AllNonDef" then 			
 		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -75,8 +75,7 @@ Else
 		click "PD_ToFill_App_Page/Lable_OptionalJobArg"
 		TypeText "new Arg"
 		
-		Else if Type="Req"then 
-		
+		Else if Type="Req" then 
 		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
 		put WaitFunction.CheckWait ("PD_ToFill_App_Page/Lable_ReqFiledsOnly") into flag
 		

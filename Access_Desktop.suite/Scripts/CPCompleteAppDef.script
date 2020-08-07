@@ -12,41 +12,33 @@ Click "PD_PBSJobApp_Page/SelectServer_CR"*)
 if  proType =1 then //BLANK 
 	Click "PD_PBSJobApp_Page/Btn_SaveProfile"
 	Click "PD_SaveProfile/Btn_OK"
-	Log "Click Cancle"
-	Click "PD_SaveProfile/Btn_Cancel"
-	
+	Log "Click Cancel"
+	Click (Text:"Cancel")
 	LogSuccess "Error indicated for BLANK input"
-	
-else if  proType=2 then // DEFAULT
-	
-	Click  // use Existing Image 
-	WaitFor 8.0, "PD_PBSJobApp_Page/Btn_SaveProfile"
-	
-else if  proType = 3 // NON - DEFAULT
-	
-	Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
-	TypeText controlKey, "a"
-	TypeText "2"
-	
-	
-else if  proType is in ("4","9")	// SELECT FILES  AND INCLUDE FILES
-	
-	get Select_File.Select_Job_File
-	
-else if  proType = 5 	// MASTER FILR DND
-	
-	get Select_File.DragAndDrop_File 
-	
+else
+	if  proType=2 then // DEFAULT	
+		Click  // use Existing Image 
+		WaitFor 8.0, "PD_PBSJobApp_Page/Btn_SaveProfile"
+	else if  proType = 3 // NON - DEFAULT
+		Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
+		TypeText controlKey, "a"
+		TypeText "2"
+	else if  proType is in ("4","9")	// SELECT FILES  AND INCLUDE FILES
+		get Select_File.Select_Job_File
+	else if  proType = 5 	// MASTER FILR DND
+		get Select_File.DragAndDrop_File 
+	end if
+	click "PD_PBSJobApp_Page/Btn_SaveProfile" 
+	Click "PD_SaveProfile/TxtBox_ProfileName"
+	TypeText  proName
+	Click "PD_SaveProfile/Btn_OK"
+	WaitFor 10, (Text:proName) 
+	Log "New Profile created"
 end if 
-
-
-click "PD_PBSJobApp_Page/Btn_SaveProfile" 
-Click "PD_SaveProfile/TxtBox_ProfileName"
-TypeText  proName
-Click "PD_SaveProfile/Btn_OK"
-
-WaitFor 14, "PD_ProfilesPage/Lable_Profiles"
-(*
+	
+	
+	
+	(*
 
 Try
 	put ProfilesSort.SortType
@@ -65,7 +57,7 @@ Catch exception
 	
 End try
 *)
-
-
-
+	
+	
+	
 

@@ -32,13 +32,13 @@ else
 	Click "PD_SaveProfile/TxtBox_ProfileName"
 	TypeText  proName
 	Click "PD_SaveProfile/Btn_OK"
-	WaitFor 10, (Text:proName) 
+	WaitFor 20, (Text:proName) 
 	Log "New Profile created"
 end if 
-	
-	
-	
-	(*
+
+
+
+(*
 
 Try
 	put ProfilesSort.SortType
@@ -57,7 +57,7 @@ Catch exception
 	
 End try
 *)
-	
-	
-	
+
+
+
 

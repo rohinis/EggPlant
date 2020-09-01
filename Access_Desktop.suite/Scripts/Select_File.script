@@ -1,7 +1,7 @@
 ﻿function DragAndDrop_File 
 	-- DoubleClick  "Dekstop_Images/InputFolder", 
 	DoubleClick (text:"InputDeck")
-	Click "Dekstop_Images/InputFile_JobFile_sh"
+	Click (Text:"JobFile.sh")
 	Drag "Dekstop_Images/InputFile_JobFile_001"
 	Drop "PD_PBSJobApp_Page/Drop_location"
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))

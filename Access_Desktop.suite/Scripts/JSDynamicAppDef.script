@@ -21,7 +21,7 @@ If Type="Context" then
 	end try
 	
 	Set the SearchRectangle to empty	
-Else
+	Else
 	
 	WaitFor 15, "PD_PBSJobApp_Page/DropDown_SelectServer", 
 	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
@@ -36,6 +36,8 @@ Else
 		Click "PD_Optistruct_App_Page/Lable_Mem"
 		TypeText controlKey, "a"
 		TypeText "120"
+		Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+		TypeText "new"
 		
 		get Select_File.Select_Master_File 
 		
@@ -62,7 +64,7 @@ Else
 		
 	Else If Type="All" then 
 		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -85,7 +87,7 @@ Else
 		
 		get Select_File.Select_Master_File 
 		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
-		Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
 		
 	Else if Type="Req"then 
 		

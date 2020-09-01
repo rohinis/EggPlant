@@ -28,10 +28,7 @@ end if
 
 
 if ProfileName = "DynamicOpti"   then
-	if ImageFound("PD_ProfilesPage/Lable_DynamicInComplete") or ImageFound(   "PD_ProfilesPage/Lable_DynamicInComplete_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_NewProfile"
 end if 
 
 
@@ -45,36 +42,22 @@ End if
 
 --- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 If ProfileName="NewPro" then 
-	if ImageFound("PD_Created_Profiles/Lable_NewPro") or ImageFound( "PD_Created_Profiles/Lable_NewPro_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
-	
+	doubleclick ("PD_ProfilesPage/Lable_NewProfile") 
 End If
 
 If ProfileName="WithFile" then 
-	if ImageFound("PD_Created_Profiles/Lable_WithFile") or ImageFound( "PD_Created_Profiles/Lable_WithFile_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_WithFile"
 End If
 
 --- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 If ProfileName="NewProIn" then 
-	if ImageFound("PD_Created_Profiles/Lable_NewProIn") or ImageFound( "PD_Created_Profiles/Lable_NewProIn_Selected" ) then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_NewProfileIn"
 End If
 
 
 If ProfileName="WithFileIn" then 
-	if ImageFound("PD_Created_Profiles/Lable_WithFileIn") or ImageFound("PD_Created_Profiles/Lable_WithFileIn_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
-	
+	DoubleClick "PD_ProfilesPage/Lable_WithFileIn"
 End If
 
 
@@ -82,38 +65,23 @@ End If
 --- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 If ProfileName="NewProDA" then 
-	
-	if ImageFound("PD_Created_Profiles/Lable_NewProDA") or ImageFound("PD_Created_Profiles/Lable_NewProDA_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_NewProfileDA"
 End If
 
 
 If ProfileName="DAWithFile" then 
-	
-	if ImageFound("PD_Created_Profiles/Lable_DAWithFile") or ImageFound("PD_Created_Profiles/Lable_DAWithFile_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_WithFileDA"
 End If
-
 
 --- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 If ProfileName="NewProDynInc" then 
-	if ImageFound("PD_Created_Profiles/Lable_NewProDynlnc") or ImageFound("PD_Created_Profiles/Lable_NewProDynlnc_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_NewProfileDAI"
 End If
 
 
 If ProfileName="WithFileDynInc" then 
-	if ImageFound("PD_Created_Profiles/Lable_WithFileDynlnc") or ImageFound("PD_Created_Profiles/Lable_WithFileDynlnc_Selected") then
-		doubleclick FoundImageLocation()
-	end if
-	Exit handler
+	DoubleClick "PD_ProfilesPage/Lable_WithFileDAI"
 End If
 
 (*WaitFor 5, "PD_PBSJobApp_Page/Lable_SelectServer"*)

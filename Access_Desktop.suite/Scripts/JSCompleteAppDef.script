@@ -82,7 +82,7 @@ else
 		get Select_File.Select_Job_File
 		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown", 
 		-- "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
-		Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
 		
 	Else if Type="Req" then
 		
@@ -111,8 +111,12 @@ else
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Log "Image Found for completed"
-	catch anException 
+		Logsuccess "JSCompleteAppDef  " & Type &  "  Success"
+		
+	catch anException
 		Log "Completed Image not found"
+		LogError "JSCompleteAppDef   " & Type & "  Failed"
+		
 	end try
 	
 	Set the SearchRectangle to empty

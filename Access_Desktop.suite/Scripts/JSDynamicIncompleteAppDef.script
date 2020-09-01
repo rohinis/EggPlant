@@ -86,67 +86,67 @@ Else
 		
 	Else If Type="AllNonDef" then 			
 		
-		Click "PD_PBSJobApp_Page/Lable_AllFileds"
+		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/Lable_OptionalFiled") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
 		Else 
 			LogError "Optional Fileds NOT Displayed"
 			Exit handler
-	End if 
-	
-	get Select_File.Select_Master_File 
-	Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
-	Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
-	
+		End if 
+		
+		get Select_File.Select_Master_File 
+		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
+		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
+		
 	Else if Type="Req"then 
+		
+		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
+		put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
+		
+		If flag="Pass"
+			Log "Only Required Fileds Displayed"
+		else 
+			LogError "Optional Fileds NOT Displayed"
+			Exit handler
+		end if 
+		get Select_File.Select_Master_File 
+		
+	End If
 	
-	Click "PD_PBSJobApp_Page/Lable_ReqFileds"
-	put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
+	if Type="Overwrite" then
+		put  WaitFunction.CheckWait ( "PD_Optistruct_App_Page/Include_OverwriteFiles") into flag
+		
+	else if Type="Fem" then 
+		
+		put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_FemFile_Selected") into flag
+	else
+		If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) or ImageFound("PD_Optistruct_App_Page/Lable_MasterFile_Selected")then 
+			Log " Master File selected "
+		End If
+		put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
+	end if 	
 	
 	If flag="Pass"
-		Log "Only Required Fileds Displayed"
+		Log "Files Pupolated"
 	else 
-		LogError "Optional Fileds NOT Displayed"
+		LogError "Files Not Pupolated"
 		Exit handler
 	end if 
-	get Select_File.Select_Master_File 
 	
-End If
-
-if Type="Overwrite" then
-	put  WaitFunction.CheckWait ( "PD_Optistruct_App_Page/Include_OverwriteFiles") into flag
+	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
+	TypeText "new"
+	Click "PD_PBSJobApp_Page/Btn_Submit"
+	try 
+		Set the SearchRectangle to ("Completed_A","Completed_B")
+		WaitFor 50, (Text: "Completed")
+		Logsuccess "Image Found for completed"
+	catch anException 
+		Logerror "Completed Image not found"
+	end try
 	
-else if Type="Fem" then 
+	Set the SearchRectangle to empty
 	
-	put WaitFunction.CheckWait("PD_Optistruct_App_Page/Lable_FemFile_Selected") into flag
-else
-	If imagefound ("PD_Optistruct_App_Page/List_MasterFile" ) or ImageFound("PD_Optistruct_App_Page/Lable_MasterFile_Selected")then 
-		Log " Master File selected "
-	End If
-	put  WaitFunction.CheckWait ("PD_Optistruct_App_Page/List_IncludeFiles" ) into flag
-end if 	
-
-If flag="Pass"
-	Log "Files Pupolated"
-else 
-	LogError "Files Not Pupolated"
-	Exit handler
-end if 
-
-Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
-TypeText "new"
-Click "PD_PBSJobApp_Page/Btn_Submit"
-try 
-	Set the SearchRectangle to ("Completed_A","Completed_B")
-	WaitFor 50, (Text: "Completed")
-	Logsuccess "Image Found for completed"
-catch anException 
-	Logerror "Completed Image not found"
-end try
-
-Set the SearchRectangle to empty
-
 End If
 
 

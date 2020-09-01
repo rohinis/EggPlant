@@ -1,5 +1,6 @@
 ﻿{
     EPVersionNumber = 2004021851;
+    PostRunScript = "Results.script";
     Schedules =     (
     );
     ScriptMetaData =     {

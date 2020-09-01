@@ -13,6 +13,8 @@ if ImageFound(3, "PD_HomePage_Lables/Lable_Summary") then
 end if 
 
 EndTestCase ShowJobProfiles
+
+
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 BeginTestCase OpenClustersWindow

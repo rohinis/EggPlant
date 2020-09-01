@@ -1,0 +1,6 @@
+﻿params script, ScriptResults
+
+put file scriptResults.logfile into myvar
+replace tab with comma in myvar
+put myvar into file "/Users/suganthinatrajan/Desktop/op.csv"
+

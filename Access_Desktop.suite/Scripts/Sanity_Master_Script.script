@@ -1,0 +1,9 @@
+﻿put ResourcePath ("sanity_testdata.xlsx") into TestDataFile
+
+--RunWithNewResults "02Master_JS" ,TestDataFile , "JS"
+
+--Run "01Master_CR" ,TestDataFile ,"CR"
+Run "02Master_JS" ,TestDataFile , "JS"
+Run "03Master_CP" ,TestDataFile, "CP"
+Run "02Master_JS" ,TestDataFile , "JSP"
+Run Verify_Settings

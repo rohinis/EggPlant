@@ -41,16 +41,16 @@ Else
 		TypeText "120"
 		get Select_File.Select_Job_File
 		
-		Else if Type=DND then 
+	Else if Type=DND then 
 		get Select_File.DragAndDrop_File 
 		
-		Else if Type="Default" then
+	Else if Type="Default" then
 		get Select_File.Select_Job_File
 		
-		Else if Type="Profie_With_File" then
+	Else if Type="Profie_With_File" then
 		
 		log "Job Submission from file wala profile"
-		Else If Type="All" then 
+	Else If Type="All" then 
 		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
 		If flag="Pass"
@@ -61,7 +61,7 @@ Else
 		end if 
 		get Select_File.Select_Job_File
 		
-		Else If Type="AllNonDef" then 			
+	Else If Type="AllNonDef" then 			
 		
 		Click (Text:"All Fields")
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
@@ -72,10 +72,10 @@ Else
 			Exit handler
 		end if 
 		get Select_File.Select_Job_File
-		click "PD_ToFill_App_Page/Lable_OptionalJobArg"
+		Click "PD_ToFill_App_Page/Lable_OptionalJobArg"
 		TypeText "new Arg"
 		
-		Else if Type="Req" then 
+	Else if Type="Req" then 
 		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
 		put WaitFunction.CheckWait ("PD_ToFill_App_Page/Lable_ReqFiledsOnly") into flag
 		
@@ -103,8 +103,10 @@ Else
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Log "Image Found for completed"
+		Logsuccess "JSCompleteAppDef  " & Type &  "  Success"
 	catch anException 
 		Log "Completed Image not found"
+		LogError "JSCompleteAppDef   " & Type & "  Failed"
 	end try
 	
 	Set the SearchRectangle to empty

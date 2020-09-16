@@ -28,13 +28,13 @@ end if
 
 
 if ProfileName = "DynamicOpti"   then
-	DoubleClick "PD_ProfilesPage/Lable_NewProfile"
+	DoubleClick "PD_ProfilesPage/Lable_DynamicInComplete"
 end if 
 
 
 If ProfileName="PBSJobApp" then 
 	if ImageFound("PD_ProfilesPage/Lable_PBSJobApp_Selected") or ImageFound("PD_ProfilesPage/Lable_PBSJobApp") then
-		doubleclick FoundImageLocation()
+	doubleclick FoundImageLocation()
 	end if
 	Exit handler
 	

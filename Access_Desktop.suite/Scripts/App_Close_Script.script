@@ -1,0 +1,19 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  Script generated:  2020-09-01 16:20:39
+  From session:  untitled session
+  Captured on:  2020-09-01 16:19:36
+  From server:  107520116
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+
+Click "Dekstop_Images/Tray_icon"
+If imagefound ("Dekstop_Images/Tray_app_icon") then
+	LogSuccess "image Found!"
+	RightClick "Dekstop_Images/Tray_app_icon"
+	Click "Dekstop_Images/Exit"
+Else
+	LogError "Image Not Found!"
+End If
+
+
+
+

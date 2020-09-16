@@ -24,7 +24,7 @@ If Type="Context" then
 	
 Else 
 	
-	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
+	WaitFor 10, "PD_PBSJobApp_Page/DropDown_SelectServer"
 	Click "PD_PBSJobApp_Page/SelectServer_CR"
 	Click "PD_PBSJobApp_Page/SelectServer_CR"
 	Click "PD_ToFill_App_Page/Lable_ToFill"

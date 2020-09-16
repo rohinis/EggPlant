@@ -19,9 +19,12 @@ function Select_Job_File
 	--Click (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
 	moveto (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
 	Click (Image:"PD_ToFill_App_Page/Lable_JobScript", WaitFor:8, hotspot:(320,7))
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
-	DoubleClick "PD_PBSJobApp_Page/InputFile_JobFilesh"
+	Click (Image:"PD_ToFill_App_Page/Explorer_Filename_Selection", WaitFor:8)
+	TypeText "C:\Users\sugan\Desktop\InputDeck\JobFile.sh"
+	Click "PD_ToFill_App_Page/explorer_open_button"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	--DoubleClick "PD_PBSJobApp_Page/InputFile_JobFilesh"
 	return "File Selected "
 end Select_Job_File
 
@@ -32,9 +35,12 @@ function Select_Fem_File
 	--Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(206,7))
 	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
-	DoubleClick  "Dekstop_Images/InputFile_box"
+	Click (Image:"PD_ToFill_App_Page/Explorer_Filename_Selection", WaitFor:8)
+	TypeText "C:\Users\sugan\Desktop\InputDeck\box.fem"
+	Click "PD_ToFill_App_Page/explorer_open_button"	
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	--DoubleClick  "Dekstop_Images/InputFile_box"
 	return "MasterFile  Selected "
 end Select_Fem_File
 
@@ -46,9 +52,11 @@ function Select_Master_File
 	//Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
-	DoubleClick  "PD_Optistruct_App_Page/IncludeFile_Master"
+	TypeText "C:\Users\sugan\Desktop\InputDeck\Master.fem"
+	Click "PD_ToFill_App_Page/explorer_open_button"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	--DoubleClick  "PD_Optistruct_App_Page/IncludeFile_Master"
 	return "MasterFile  Selected "
 end Select_Master_File
 
@@ -58,9 +66,11 @@ function OverWrite_Master_File
 	--Click (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
 	moveto (Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))  
 	Click ( Image: "PD_Optistruct_App_Page/Lable_MasterFile" , WaitFor:8, hotspot:(320,7))
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
-	DoubleClick  "Dekstop_Images/InputFile_OverwriteMaster"
+	TypeText "C:\Users\sugan\Desktop\InputDeck\OverwriteMaster.fem"
+	Click "PD_ToFill_App_Page/explorer_open_button"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	--DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	--ubleClick  "Dekstop_Images/InputFile_OverwriteMaster"
 	return "MasterFile  Overwritten"
 end OverWrite_Master_File
 
@@ -84,9 +94,12 @@ end Select_Master_File_DND
 
 function Select_Starter_File  
 	Click "PD_Radioss/Icon_SelectFile"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_Desktop"
-	DoubleClick "PD_PBSJobApp_Page/InputFolder_InputDeck"
-	DoubleClick "PD_Radioss/WinExp_StarterFile"
+	TypeText "C:\Users\sugan\Desktop\InputDeck\LAME_EQUERRE_0000.rad"
+	Click "PD_ToFill_App_Page/explorer_open_button"
+	
+	--Tbleick "PD_PBSJobApp_Page/InputFolder_Desktop"
+	--DoubleCck "PD_PBSJobApp_Page/InputFolder_InputDeck"
+	--DoubleClk "PD_Radioss/WinExp_StarterFile"
 	return "Starter File  Selected "
 end Select_Starter_File
 

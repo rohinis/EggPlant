@@ -21,7 +21,7 @@ If Type="Context" then
 	end try
 	
 	Set the SearchRectangle to empty	
-	Else
+Else
 	
 	WaitFor 15, "PD_PBSJobApp_Page/DropDown_SelectServer", 
 	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
@@ -36,8 +36,8 @@ If Type="Context" then
 		Click "PD_Optistruct_App_Page/Lable_Mem"
 		TypeText controlKey, "a"
 		TypeText "120"
-		Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
-		TypeText "new"
+		--Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA", 
+		--TypeText "new"
 		
 		get Select_File.Select_Master_File 
 		

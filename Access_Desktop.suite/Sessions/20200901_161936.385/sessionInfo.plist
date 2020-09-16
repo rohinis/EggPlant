@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[689, 445, 709, 465], elementName:"image0001", eventNum:2, folderPath:"PD_ProfilesPage", hotSpot:[697.939726, 315.344891], imageName:"image0001", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[555.479452, 284.667883, 721.479452, 302.667883], elementName:"image0002", eventNum:4, folderPath:"PD_ProfilesPage", hotSpot:[587.479452, 470.332117], imageName:"image0002", itemEvent:"TurboListItemEvent_RightClick", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0004.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:8}, {captureRect:[550.747945, 277.189781, 724.747945, 302.189781], elementName:"image0003", eventNum:6, folderPath:"PD_ProfilesPage", hotSpot:[575.747945, 480.810219], imageName:"image0003", itemEvent:"TurboListItemEvent_RightClick", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0006.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:7}, {captureRect:[608.972603, 471.062044, 639.972603, 484.062044], elementName:"Paste", eventNum:8, folderPath:"PD_ProfilesPage", hotSpot:[629.972603, 289.937956], imageName:"Paste", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", OCRText:"Paste", screenShotFile:"Screen0008.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[832.693151, 251.171533, 863.693151, 267.171533], elementName:"Open", eventNum:10, folderPath:"PD_ProfilesPage", hotSpot:[853.693151, 511.828467], imageName:"Open", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0010.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[840.964384, 16.479927, 853.964384, 25.479927], elementName:"image0003", eventNum:2, folderPath:"Dekstop_Images", hotSpot:[846.964384, 744.520073], imageName:"image0003", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0002.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[764, 0, 1024, 165], elementName:"image0004", eventNum:4, folderPath:"Dekstop_Images", hotSpot:[872.964384, 705.208029], imageName:"image0004", itemEvent:"TurboListItemEvent_RightClick", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0004.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[764, 0, 1024, 165], elementName:"image0005", eventNum:6, folderPath:"Dekstop_Images", hotSpot:[868.356164, 704.863139], imageName:"image0005", itemEvent:"TurboListItemEvent_RightClick", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0006.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[893.038356, 70.554745, 917.038356, 83.554745], elementName:"Exit", eventNum:8, folderPath:"Dekstop_Images", hotSpot:[898.038356, 691.445255], imageName:"Exit", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", OCRText:"Exit", screenShotFile:"Screen0008.png", searchType:"Smoothed for Text", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

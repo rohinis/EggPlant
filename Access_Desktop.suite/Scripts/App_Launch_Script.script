@@ -1,4 +1,5 @@
-﻿Typetext WindowsKey, "r"
-TypeText "C:\Users\sugan\AppData\Local\altair\Altair Access\2020.3\exec\scripts\Altair_Access.exe", return
-Wait 20, 
-DoubleClick (Image:"Dekstop_Images/Desktop_shortcut", WaitFor:29)
+﻿--Typetext WindowsKey, "r"
+--TypeText "C:\Users\pbsadmin\AppData\Local\altair\Altair Access\2020.3\exec\scripts\Altair_Access.exe", return
+--Wait 10, 
+DoubleClick (Image:"Dekstop_Images/Desktop_shortcut")
+wait 10

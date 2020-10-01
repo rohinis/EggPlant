@@ -8,6 +8,7 @@
     HasAlpha = 1;
     HotSpotX = 128;
     HotSpotY = 23;
+    ImageDescription = <>;
     LastKnownLocationX = 0;
     LastKnownLocationY = 0;
     OriginalLocationX = 546;
@@ -15,6 +16,7 @@
     Precise = 0;
     Pulsing = 0;
     Scale = 1;
+    WaitFor = 8;
     tags =     (
     );
 }

@@ -2,9 +2,9 @@
 
 
 
-	Set the SearchRectangle to (1620,0,1920,123)
+	Set the SearchRectangle to (745,14,1010,104)
 	--setlogging off
-	moveto  (1900,90)
+	--moveto  (1900,90)
 	repeat  35 seconds 
 		--while imageFound("Notifications")
 		
@@ -58,11 +58,11 @@
 	--setlogging on
 	
 	set the SearchRectangle to ()
-	
-	
-	
-	return JS
-	
-	
+
+
+
+return JS
+
+
 end  Check_Cluster_Notifications
 

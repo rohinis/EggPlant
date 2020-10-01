@@ -17,7 +17,10 @@ if creds.Flow	 is in ("0") then
 		Log "**************************************************************************"
 		LogSuccess "Cluster Registeration Sucessfully"
 		Log "**************************************************************************"
-		click "ClusterElements/Icon_Close"
+		--click "ClusterElements/Icon_Close"
+		Click "ClusterElements/Cluster_panel_greentick"
+		Click "ClusterElements/Cluster_del_btn"
+		Click "ClusterElements/Removecluster_yes_btn"
 		
 		--run AccessSettings 2
 		--log it 
@@ -35,7 +38,12 @@ if creds.Flow	 is in ("0") then
 		LogError "Cluster RegisterationFailed"
 		Log "**************************************************************************"
 		CaptureScreen (Name: "Cluster-Registeration-Failed")
-		get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+		Run "App_Close_Script"
+		wait 5
+		Run "App_Launch_Script"
+		wait 10
+		--Click "Dekstop_Images/App_Close_btn"
+		--get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
 		
 	end if 
 	
@@ -61,21 +69,21 @@ else if creds.Flow is in ("1") then
 		LogSuccess "Cluster Registeration Failed - Negativr Flow"
 		Log "**************************************************************************"
 	end if 
-	wait 4
-	get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+	Run "App_Close_Script"
+	wait 5
+	Run "App_Launch_Script"
+	wait 5
+	--Click "Dekstop_Images/App_Close_btn"
+	--wait 4
+	--get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
 	
 else 
 	
 	Log "Invalid Input test case "
-	get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
+	Run "App_Close_Script"
+	wait 5
+	Run "App_Launch_Script"
+	wait 5
+	--Click "Dekstop_Images/App_Close_btn"
+	--get  CR_Fill_Deatails.Clear_Cluster_Form_Sanity  (creds)
 end if 
-
-
-
-
-
-
-
-
-
-

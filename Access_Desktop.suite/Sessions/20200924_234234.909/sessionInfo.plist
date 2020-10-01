@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adaptiveConstant</key>
+	<integer>7</integer>
+	<key>commandList</key>
+	<string>[{captureRect:[243, 579, 374, 608], elementName:"Cluster_panel", eventNum:2, folderPath:"ClusterElements", hotSpot:[276, 175], imageName:"Cluster_panel", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Replace", itemType:"TurboListItemType_Image", OCRText:"0CR", screenShotFile:"Screen0002.png", searchType:"Smoothed for Text", skipStep:False, userModified:True, usingTempImageName:False, waitForTime:-1}, {captureRect:[241, 577, 377, 604], elementName:"image0004", eventNum:4, folderPath:"ClusterElements", hotSpot:[354.493151, 175.023723], imageName:"image0004", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0004.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}, {captureRect:[522, 424, 597, 448], elementName:"image0005", eventNum:6, folderPath:"ClusterElements", hotSpot:[537.567123, 325.718978], imageName:"image0005", itemEvent:"TurboListItemEvent_Click", itemMode:"TurboListItemMode_Existing", itemType:"TurboListItemType_Image", screenShotFile:"Screen0006.png", searchType:"Tolerant of Background", skipStep:False, userModified:False, usingTempImageName:False, waitForTime:-1}]</string>
+	<key>dilations</key>
+	<integer>3</integer>
+	<key>maxSize</key>
+	<integer>300</integer>
+	<key>minSize</key>
+	<integer>16</integer>
+	<key>savedWithEpfVersion</key>
+	<integer>2004021851</integer>
+	<key>sessionType</key>
+	<string>turboSession</string>
+	<key>sessionUsesDOMObjects</key>
+	<false/>
+</dict>
+</plist>

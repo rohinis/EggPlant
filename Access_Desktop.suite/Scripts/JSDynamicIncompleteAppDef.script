@@ -1,7 +1,7 @@
 ﻿params Type 
 
 If Type="Context" then 
-	DoubleClick   "Dekstop_Images/InputFolder", 
+	DoubleClick "Dekstop_Images/InputFolder"
 	waitfor 2 ,"Dekstop_Images/InputFile_MasterFile.fem"
 	RightClick "Dekstop_Images/InputFile_MasterFile.fem"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3)
@@ -23,8 +23,8 @@ If Type="Context" then
 	Click "Dekstop_Images/Folder_close_Red" 
 	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
 	TypeText "new"	
-	Click "PD_PBSJobApp_Page/Btn_Submit"
-	try 
+	Click "PD_PBSJobApp_Page/Btn_Submit", "PD_PBSJobApp_Page/Btn_Submit", "Dekstop_Images/InputFile_MasterFile.fem"
+	(*try 
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Logsuccess "Image Found for completed"
@@ -34,6 +34,7 @@ If Type="Context" then
 	
 	Set the SearchRectangle to empty
 	
+*)
 Else
 	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
 	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
@@ -99,7 +100,7 @@ Else
 		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown"
 		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
 		
-	Else if Type="Req"then 
+		Else if Type="Req"then 
 		
 		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
 		put WaitFunction.CheckWait ("PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly") into flag
@@ -137,7 +138,7 @@ Else
 	Click "PD_Dynamic_incomplete_Page/Lable_ToFill_DA"
 	TypeText "new"
 	Click "PD_PBSJobApp_Page/Btn_Submit"
-	try 
+	(*try 
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Logsuccess "Image Found for completed"
@@ -147,16 +148,19 @@ Else
 	
 	Set the SearchRectangle to empty
 	
+*)
 End If
 
-
-if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
+CaptureScreen 
+if ImageFound (image:"PD_HomePage_Lables/Lable_Summary") then
 	LogSuccess "Navigated to Summary Page"
 	--	JobSubmission_Notification
 else 
 	LogError "Still on Profile Page"
 	CaptureScreen 
 end if
+
+MoveTo "PD_HomePage_Lables/Lable_Summary"
 
 (*
 

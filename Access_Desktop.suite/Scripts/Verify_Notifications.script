@@ -1,6 +1,6 @@
 ﻿-- Test case : Job_Submission_CompleteAppDef_From_New_Job
 BeginTestCase Notifications_Job_Submission_Sucessfull
-Run GoToApplicaiton "PBSJobApp" 
+Run GoToApplicaiton "ShellScript" 
 Run Job_Submit "Default"
 EndTestCase Notifications_Job_Submission_Sucessfull
 
@@ -54,7 +54,7 @@ repeat with each creds of credslist
 		wait 4
 		get  Cluster_Registration_Form.Clear_Cluster_Form (creds)
 		
-		else 
+	else 
 		Log "BLANK Input test case "
 		get  Cluster_Registration_Form.Clear_Cluster_Form(creds)
 	end if 

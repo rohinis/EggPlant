@@ -1,1 +1,20 @@
-﻿{CaptureDate = "2017-07-06 14:02:50 +0530"; CaptureHost = testServer; CaptureScreenSize = (1920, 1080); HasAlpha = 1; HotSpotX = 13; HotSpotY = 7; ImageDescription = <>; LastKnownLocationX = 0; LastKnownLocationY = 0; OriginalLocationX = 1743; OriginalLocationY = 1026; Precise = 0; Pulsing = 0; Scale = 1; SearchAlgorithm = TextSmoothSquare; }
+﻿{
+    CaptureDate = "2017-07-06 14:02:50 +0530";
+    CaptureHost = testServer;
+    CaptureScreenSize =     (
+        1920,
+        1080
+    );
+    HasAlpha = 1;
+    HotSpotX = 13;
+    HotSpotY = 7;
+    ImageDescription = <>;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 1743;
+    OriginalLocationY = 1026;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+}

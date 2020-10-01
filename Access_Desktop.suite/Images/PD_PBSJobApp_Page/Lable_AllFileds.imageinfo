@@ -1,1 +1,21 @@
-﻿{CaptureDate = "2018-10-25 11:01:28 +0530"; CaptureHost = TestServer; CaptureScreenSize = (1920, 1080); HasAlpha = 1; HotSpotX = 35; HotSpotY = 5; LastKnownLocationX = 0; LastKnownLocationY = 0; OriginalLocationX = 1736; OriginalLocationY = 522; Precise = 0; Pulsing = 0; Scale = 1; }
+﻿{
+    CaptureDate = "2020-09-18 19:06:11 +0000";
+    CaptureHost = "10.75.20.116";
+    CaptureScreenSize =     (
+        1024,
+        768
+    );
+    HasAlpha = 1;
+    HotSpotX = 41;
+    HotSpotY = 16;
+    LastKnownLocationX = 0;
+    LastKnownLocationY = 0;
+    OriginalLocationX = 508;
+    OriginalLocationY = 77;
+    Precise = 0;
+    Pulsing = 0;
+    Scale = 1;
+    SearchAlgorithm = TextSmoothSquare;
+    tags =     (
+    );
+}

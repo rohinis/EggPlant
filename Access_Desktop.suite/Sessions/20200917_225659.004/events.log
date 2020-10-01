@@ -1,0 +1,32 @@
+1	0.003546	start	
+2	2.98573	mouseDown	{button:1, clickCount:1, hotSpot:[429.813699, 219.45438]}
+3	3.16792	mouseUp	{button:1, clickCount:1, hotSpot:[429.813699, 219.45438]}
+4	4.2866	keyDown	{modifiers:256, string:" ", theKey:" "}
+5	4.35437	keyUp	{modifiers:256, string:" ", theKey:" "}
+6	4.44183	keyDown	{modifiers:256, string:" ", theKey:" "}
+7	4.50223	keyUp	{modifiers:256, string:" ", theKey:" "}
+8	4.5801	keyDown	{modifiers:256, string:" ", theKey:" "}
+9	4.63504	keyUp	{modifiers:256, string:" ", theKey:" "}
+10	4.7088	keyDown	{modifiers:256, string:" ", theKey:" "}
+11	4.76411	keyUp	{modifiers:256, string:" ", theKey:" "}
+12	4.83367	keyDown	{modifiers:256, string:" ", theKey:" "}
+13	4.88893	keyUp	{modifiers:256, string:" ", theKey:" "}
+14	4.95591	keyDown	{modifiers:256, string:" ", theKey:" "}
+15	5.02015	keyUp	{modifiers:256, string:" ", theKey:" "}
+16	5.10311	keyDown	{modifiers:256, string:" ", theKey:" "}
+17	5.1479	keyUp	{modifiers:256, string:" ", theKey:" "}
+18	5.23818	keyDown	{modifiers:256, string:" ", theKey:" "}
+19	5.27497	keyUp	{modifiers:256, string:" ", theKey:" "}
+20	5.351	keyDown	{modifiers:256, string:" ", theKey:" "}
+21	5.39803	keyUp	{modifiers:256, string:" ", theKey:" "}
+22	5.47182	keyDown	{modifiers:256, string:" ", theKey:" "}
+23	5.53979	keyUp	{modifiers:256, string:" ", theKey:" "}
+24	7.19073	mouseDown	{button:1, clickCount:1, hotSpot:[422.235616, 246.766423]}
+25	7.30851	mouseUp	{button:1, clickCount:1, hotSpot:[422.235616, 246.766423]}
+26	13.424	mouseDown	{button:1, clickCount:1, hotSpot:[427.726027, 276.826642]}
+27	13.6151	mouseUp	{button:1, clickCount:1, hotSpot:[427.726027, 276.826642]}
+28	14.3511	mouseDown	{button:1, clickCount:1, hotSpot:[426.065753, 311.370438]}
+29	14.4954	mouseUp	{button:1, clickCount:1, hotSpot:[426.065753, 311.370438]}
+30	16.5756	mouseDown	{button:1, clickCount:1, hotSpot:[509.424658, 491.156934]}
+31	16.7737	mouseUp	{button:1, clickCount:1, hotSpot:[509.424658, 491.156934]}
+32	19.1073	end	

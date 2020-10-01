@@ -1,0 +1,19 @@
+﻿function HTTPS_CR_Fill creds
+
+	log "servername ---- "&creds.DisplayName
+	
+	
+end HTTPS_CR_Fill
+
+Click "AddCluster/HTTPSClusterDisplayName"
+TypeText "CR"
+Click "AddCluster/HTTPSLoginNodeName"
+TypeText "https://172.16.80.30:4443"
+Click "AddCluster/HTTPSUsername"
+TypeText "pbsadmin"
+Click "AddCluster/HTTPSPassword"
+TypeText "pbsadmin"
+Click "AddCluster/HTTPSAdd"
+Click (Image:"AddCluster/HTTPSDone", WaitFor:15)
+
+

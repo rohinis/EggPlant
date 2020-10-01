@@ -6,9 +6,9 @@ If Type="Context" then
 	DoubleClick  "Dekstop_Images/InputFolder", 
 	RightClick "Dekstop_Images/InputFile_JobFile_sh"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with", WaitFor:3), 
-	Click (Text:"ToFill")
-	Set the SearchRectangle to (740,9,1022,104)
-	WaitFor 25,  "Notifications/Nft_InputsRequired"
+	Click (Image:"Dekstop_Images/ContextSubMenu_ToFill")
+	Set the SearchRectangle to (732,17,1013,139)
+	WaitFor 40,  "Notifications/Nft_InputsRequired", 
 	moveto "Notifications/Nft_InputsRequired"
 	put readText(imageLocation("Notifications/Nft_InputsRequired") + (50,5), ) into InputRequiredMsg
 	set the SearchRectangle to ()
@@ -18,24 +18,22 @@ If Type="Context" then
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	WaitFor 2, "Dekstop_Images/Folder_close_Red" 
 	Click "Dekstop_Images/Folder_close_Red" 
-	Click (Text:"All Fields")
+	Click "PD_ToFill_App_Page/Lable_ToFill"
 	TypeText "new"
 	Click "PD_PBSJobApp_Page/Btn_Submit"
 	
 Else 
-	
-	WaitFor 10, "PD_PBSJobApp_Page/DropDown_SelectServer"
-	Click "PD_PBSJobApp_Page/SelectServer_CR"
+	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
 	Click "PD_PBSJobApp_Page/SelectServer_CR"
 	Click "PD_ToFill_App_Page/Lable_ToFill"
+	Click ""
 	TypeText "new"
 	
 	If Type = "Non-Default"  then 
 		
 		Click "PD_PBSJobApp_Page/Lable_NCPU_Bold"
 		TypeText controlKey, "a"
-		
-		TypeText "12321"
+		TypeText "2"
 		Click "PD_PBSJobApp_Page/Lable_Memory_Bold"
 		TypeText controlKey, "a"
 		TypeText "120"
@@ -51,7 +49,8 @@ Else
 		
 		log "Job Submission from file wala profile"
 	Else If Type="All" then 
-		Click (Text:"All Fields")
+		
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -63,7 +62,7 @@ Else
 		
 	Else If Type="AllNonDef" then 			
 		
-		Click (Text:"All Fields")
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
 		put  WaitFunction.CheckWait ( "PD_ToFill_App_Page/Lable_OptionalFileds") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -72,10 +71,11 @@ Else
 			Exit handler
 		end if 
 		get Select_File.Select_Job_File
-		Click "PD_ToFill_App_Page/Lable_OptionalJobArg"
+		click "PD_ToFill_App_Page/Lable_OptionalJobArg"
 		TypeText "new Arg"
 		
-	Else if Type="Req" then 
+	Else if Type="Req"then 
+		
 		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
 		put WaitFunction.CheckWait ("PD_ToFill_App_Page/Lable_ReqFiledsOnly") into flag
 		
@@ -93,25 +93,13 @@ Else
 	
 	If imagefound ( "PD_PBSJobApp_Page/InputFile_Selected" ) or ImageFound("PD_PBSJobApp_Page/Drop_location_JobScript") then 
 		Log "File Listed" 
-	else 
+	else 		
 		LogError "File not Listed"
-		
 	End if 
+	
 	Click "PD_PBSJobApp_Page/Btn_Submit"
-	
-	try 
-		Set the SearchRectangle to ("Completed_A","Completed_B")
-		WaitFor 50, (Text: "Completed")
-		Log "Image Found for completed"
-		Logsuccess "JSCompleteAppDef  " & Type &  "  Success"
-	catch anException 
-		Log "Completed Image not found"
-		LogError "JSCompleteAppDef   " & Type & "  Failed"
-	end try
-	
-	Set the SearchRectangle to empty
-	
 End if 
+
 
 
 

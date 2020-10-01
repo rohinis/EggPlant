@@ -7,22 +7,32 @@
 --put ResourcePath ("sanity_testdata.xlsx") into TestDataFile
 put ResourcePath("Regression_testdata.xlsx") into TestDataFile
 
---Run "01Master_CR" ,TestDataFile ,"CR"
+Run "01Master_CR" ,TestDataFile ,"CR"
 --Run "02Master_JS" ,TestDataFile , "JS"
 --Run "03Master_CP" ,TestDataFile, "CP"
 --Run "02Master_JS", TestDataFile, "JSP"
 
 
+
+(*
+Run App_Launch_Script
+wait 10
 Run "02Master_JS" ,TestDataFile , "JSCompleteAppDef"
 Run App_Close_Script
+wait 10
 Run App_Launch_Script
 Run "02Master_JS" ,TestDataFile , "JSDynamicIncompleteAppDef"
 Run App_Close_Script
+wait 10
 Run App_Launch_Script
 Run "02Master_JS" ,TestDataFile , "JSDynamicAppDef"
 Run App_Close_Script
+wait 10
 Run App_Launch_Script
 Run "02Master_JS" ,TestDataFile , "JSIncompleteAppDef"
+Run App_Close_Script
+wait 10
+*)
 
 
 // "PD_Optistruct_App_Page/Lable_OptionalFiled", "PD_Optistruct_App_Page/Lable_ReqFiledsOnly", "PD_Dynamic_incomplete_Page/Lable_ReqFiledsOnly", "PD_PBSJobApp_Page/Drop_location", "PD_Created_Profiles/Lable_DAWithFile", "PD_Created_Profiles/Lable_DAWithFile_Selected", "PD_Created_Profiles/Lable_NewProDA", "PD_Created_Profiles/Lable_NewProDA_Selected", "PD_Created_Profiles/Lable_DAWithFile", "PD_Created_Profiles/Lable_DAWithFile_Selected"

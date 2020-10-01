@@ -1,32 +1,19 @@
 ﻿
 params Type
--- put "Non-Default" into TYpe
---put "Profie_With_File" into Type
-
 
 if Type="Context" then 
 	DoubleClick (Image:"Dekstop_Images/InputFolder")
 	RightClick (Image:"Dekstop_Images/InputFile_JobFile_sh")
 	// "Dekstop_Images/InputFolder"
 	Click (Image:"Dekstop_Images/ContextMenu_Process_with")
-	Click(Text:"ShellScript")
+	Click(Image:"Dekstop_Images/ContextSubMenu_PBSJobApp")
 	Click  (Image:"Dekstop_Images/InputFile_JobFile_sh")
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	--	WaitFor 2, "Dekstop_Images/Folder_close_Red" , "Dekstop_Images/Folder_close_Red"
 	Click "Dekstop_Images/Folder_close_Red" 
-	try 
-		Set the SearchRectangle to ("Completed_A","Completed_B")
-		WaitFor 50, (Text: "Completed")
-		Logsuccess "Image Found for completed"
-	catch anException 
-		Logerror "Completed Image not found"
-	end try
 	
-	Set the SearchRectangle to empty
-else  
-	(*
+Else 
 	WaitFor 5, "PD_PBSJobApp_Page/DropDown_SelectServer"
-	*)
 	--	Click "PD_PBSJobApp_Page/DropDown_SelectServer"
 	--	moveto (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
 	--Click (image:"PD_PBSJobApp_Page/SelectServer_CR" , hotspot :(30,0))
@@ -50,13 +37,11 @@ else
 		get Select_File.Select_Job_File
 		
 	Else if Type="Profie_With_File" then
-		Log "New - Profile With File"
-		DoubleClick "PD_Created_Profiles/WithFile_image"
-		get Select_File.Select_Job_File
+		log "Job Submission from file wala profile"
 		
 	Else If Type="All" then 
 		--Click "PD_PBSJobApp_Page/Lable_ReqFileds" ,"PD_PBSJobApp_Page/Lables_OptionalFileds"
-		Click (Text:"All Fields")
+		Click "PD_PBSJobApp_Page/Lable_AllFileds", "PD_PBSJobApp_Page/Lable_AllFileds"
 		
 		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lables_OptionalFileds" ) into flag
 		
@@ -71,7 +56,7 @@ else
 		
 	Else If Type="AllNonDef" then 	
 		
-		Click (Text:"All Fields")
+		Click "PD_PBSJobApp_Page/Lable_AllFileds"
 		put  WaitFunction.CheckWait ("PD_PBSJobApp_Page/Lables_OptionalFileds") into flag
 		If flag="Pass"
 			Log "Optional Fileds Displayed"
@@ -82,8 +67,7 @@ else
 		get Select_File.Select_Job_File
 		Click "PD_PBSJobApp_Page/Lable_Queue_dropDown", 
 		-- "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
-		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"
-		
+		--Click "PD_PBSJobApp_Page/ListItem_QueueNormalPri"	
 	Else if Type="Req" then
 		
 		Click "PD_PBSJobApp_Page/Lable_ReqFileds"
@@ -106,21 +90,6 @@ else
 		
 	End if 
 	Click "PD_PBSJobApp_Page/Btn_Submit"
-	
-	try 
-		Set the SearchRectangle to ("Completed_A","Completed_B")
-		WaitFor 50, (Text: "Completed")
-		Log "Image Found for completed"
-		Logsuccess "JSCompleteAppDef  " & Type &  "  Success"
-		
-	catch anException
-		Log "Completed Image not found"
-		LogError "JSCompleteAppDef   " & Type & "  Failed"
-		
-	end try
-	
-	Set the SearchRectangle to empty
-	
 End if 
 
 

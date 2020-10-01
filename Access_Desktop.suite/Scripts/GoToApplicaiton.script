@@ -32,9 +32,9 @@ if ProfileName = "DynamicOpti"   then
 end if 
 
 
-If ProfileName="PBSJobApp" then 
+If ProfileName="ShellScript" then 
 	if ImageFound("PD_ProfilesPage/Lable_PBSJobApp_Selected") or ImageFound("PD_ProfilesPage/Lable_PBSJobApp") then
-	doubleclick FoundImageLocation()
+		doubleclick FoundImageLocation()
 	end if
 	Exit handler
 	

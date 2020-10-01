@@ -1,15 +1,15 @@
 ﻿{
     EPVersionNumber = 2004021851;
-    PostRunScript = "Results.script";
     Schedules =     (
     );
     ScriptMetaData =     {
-        JSIncompleteAppDef =         {
+        JScompleteAppDef =         {
             TableScriptUserActionDefaultArguments = "";
             TableScriptUserActionType = "Not a Table Action";
         };
     };
     SuiteEncodedTextKey = "{GkcJa)LBfz`wn?m";
+    SuiteVariables = "{:}";
     helpedSuitesInfo =     (
     );
     helperSuitesInfo =     (

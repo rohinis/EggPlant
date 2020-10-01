@@ -17,7 +17,7 @@
 	--Click (image: "ClusterElements/txtbxClusterName", scale: 0.5 to 1.5 by .25) 
 	TypeText  creds.serverName
 	
-	Click (image: "ClusterElements/txtbxHostName", scale: 0.5 to 1.5 by .25)
+	Click "ClusterElements/txtbxHostName"
 	Log foundImageInfo().Scale 
 	TypeText creds.hostName
 	
@@ -46,7 +46,9 @@
 	else if  settype="SSH" then 
 		
 		Click "ClusterElements/DropDownArrow"
-		Click "ClusterElements/ListItemSSHKey"
+		--Click "ClusterElements/ListItemSSHKey"
+		Click "ClusterElements/Password_dropdown"
+		click  "ClusterElements/ListItemSSHKey"
 		Click "ClusterElements/BtnImportKey"
 		doubleclick  "PD_PBSJobApp_Page/InputFolder_Desktop"
 		
@@ -79,16 +81,16 @@
 		TypeText controlKey, "a"
 		Typetext backspace
 		typetext creds.CentralRepo
+		
+	end if
 	
-end if
-
-
-repeat while imageFound("Btn-SR-Add")
-	if imagefound( "Btn-SR-Add/Btn-Add-Inactive")
-	LogSuccess "Add Button in Inactive --  BLANK Input" 
+	
+	repeat while imageFound("Btn-SR-Add")
+		if imagefound( "Btn-SR-Add/Btn-Add-Inactive")
+			LogSuccess "Add Button in Inactive --  BLANK Input" 
 		end if
-		Click  foundImageLocation()
-		exit repeat 
+		Click  foundImageLocation() 
+		exit repeat
 	end repeat
 	
 	
@@ -96,8 +98,7 @@ repeat while imageFound("Btn-SR-Add")
 end Fill_Cluster_Details_Sanity
 
 
-
-function Clear_Cluster_Form_Sanity creds
+(*function Clear_Cluster_Form_Sanity creds
 	put creds.set into settype
 	Click ("ClusterElements/txtbxClusterName")
 	TypeText controlKey, "a"
@@ -137,6 +138,6 @@ function Clear_Cluster_Form_Sanity creds
 	
 	
 	Log "from clear fields"
-	
-end Clear_Cluster_Form_Sanity
+
+end Clear_Cluster_Form_Sanity*)
 

@@ -1,53 +1,50 @@
 ﻿function Check_Notifications 
 	
-	Set the SearchRectangle to (746,9,929,80)
---(1620,0,1920,123)
-
---setlogging off
---moveto  (1900,90)
-repeat  35 seconds 
-	--while imageFound("Notifications")
+	Set the SearchRectangle to (745,14,1010,104)
+	--setlogging off
+	--moveto  (1900,90)
+	repeat  2 seconds 
+		--while imageFound("Notifications")
+		
+		if imagefound  ( image:"Notifications/Nft_JobSucessfull_Icon", scale:0.5 to 1.5 by .25)
+			put Pass into Flag 
+			put   foundImageLocation() into Location
+			log "Location " &Location
+			put readText(Location + (50,5), ) into JobSucess
+			
+			Log "**************************************************************************"
+			Log "Notification  - " &JobSucess
+			Log "**************************************************************************"
+			--RunWithNewResults "ClearFields"
+			set the wordDelimiter to " ." & space & tab
+			put word 3 of JobSucess into jobID
+			put "******************************************************************"
+			put jobID
+			put "******************************************************************"
+			put ((JobID:jobID,Flag:"Pass")) into JS
+			
+			
+			exit repeat
+			
+			
+		else if imagefound ( image:"Notifications/RedCross1", scale:0.5 to 1.5 by .25)
+			
+			put Fail into Flag 
+			put   foundImageLocation() into Location
+			log "Location " &Location
+			put readText(Location + (50,5), ) into ErrorMsg
+			
+			Log "**************************************************************************"
+			Log "Notification  - " &ErrorMsg
+			Log "**************************************************************************"
+			
+			
+			put ((JobID:ErrorMsg,Flag:"Fail")) into JS
+			exit repeat 
+		end if
+	end repeat
+	--setlogging on
 	
-	
-	if imagefound  ( image:"Notifications/Nft_JobSucessfull_Icon",scale:0.5 to 1.5 by .25)
-		put Pass into Flag 
-		put   foundImageLocation() into Location
-		log "Location " &Location
-		put readText(Location + (50,5), ) into JobSucess
-		
-		Log "**************************************************************************"
-		Log "Notification  - " &JobSucess
-		Log "**************************************************************************"
-		--RunWithNewResults "ClearFields"
-		set the wordDelimiter to " ." & space & tab
-		put word 3 of JobSucess into jobID
-		put "******************************************************************"
-		put jobID
-		put "******************************************************************"
-		put ((JobID:jobID,Flag:"Pass")) into JS
-		
-		
-		exit repeat
-		
-		
-	else if imagefound ( image:"Notifications/RedCross1", scale:0.5 to 1.5 by .25)
-		
-		put Fail into Flag 
-		put   foundImageLocation() into Location
-		log "Location " &Location
-		put readText(Location + (50,5), ) into ErrorMsg
-		
-		Log "**************************************************************************"
-		Log "Notification  - " &ErrorMsg
-		Log "**************************************************************************"
-		
-		
-		put ((JobID:ErrorMsg,Flag:"Fail")) into JS
-		exit repeat 
-	end if
-end repeat
---setlogging on
-
-set the SearchRectangle to ()
-return JS
+	set the SearchRectangle to ()
+	return JS
 end Check_Notifications

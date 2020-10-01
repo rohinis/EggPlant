@@ -12,7 +12,7 @@ If Type="Context" then
 	moveto (image:"Dekstop_Images/Folder_close_Help" , hotspot :(-6,-8))
 	--WaitFor 2, "Dekstop_Images/Folder_close_Red" 
 	Click "Dekstop_Images/Folder_close_Red" 
-	try 
+	(*try 
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Logsuccess "Image Found for completed"
@@ -20,7 +20,7 @@ If Type="Context" then
 		Logerror "Completed Image not found"
 	end try
 	
-	Set the SearchRectangle to empty	
+	Set the SearchRectangle to empty*)	
 Else
 	
 	WaitFor 15, "PD_PBSJobApp_Page/DropDown_SelectServer", 
@@ -131,21 +131,21 @@ Else
 End If
 
 
-If Type = "Context" then 
-	logSuccess "Job Submitted"
-	--JobSubmission_Notification	
-	
-Else 
-	
-	if ImageFound(3, image:"PD_HomePage_Lables/Lable_Summary",scale:0.5 to 1.5 by .25) then
-		LogSuccess "Navigated to Summary Page"
-		--	JobSubmission_Notification
-	else 
-		LogError "Still on Profile Page"
-		CaptureScreen (904,209,1022,279)
-	end if
-	
-	try 
+--If Type = "Context" then 
+--	logSuccess "Job Submitted"
+--JobSubmission_Notification	
+
+--Else
+
+if ImageFound(image:"PD_HomePage_Lables/Lable_Recently") then
+	LogSuccess "Navigated to Summary Page"
+	--	JobSubmission_Notification
+else 
+	LogError "Still on Profile Page"
+	CaptureScreen (904,209,1022,279) 
+end if
+
+(*try 
 		Set the SearchRectangle to ("Completed_A","Completed_B")
 		WaitFor 50, (Text: "Completed")
 		Log "Image Found for completed"
@@ -153,6 +153,6 @@ Else
 		Log "Completed Image not found"
 	end try
 	
-	Set the SearchRectangle to empty
-end if
+	Set the SearchRectangle to empty*)
+--end if
 
